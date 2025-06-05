@@ -5,8 +5,26 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mikheil Berishvili | Full-Stack Developer",
-  description: "Personal portfolio of Mikheil Berishvili, a Full-Stack Developer",
+  title: "Mikheil Berishvili – Portfolio",
+  description: "Full-Stack Developer from Georgia 🇬🇪",
+  openGraph: {
+    title: "Mikheil Berishvili – Portfolio",
+    description: "Full-Stack Developer from Georgia 🇬🇪",
+    images: [
+      {
+        url: "/me.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Mikheil Berishvili Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mikheil Berishvili – Portfolio",
+    description: "Full-Stack Developer from Georgia 🇬🇪",
+    images: ["/me.png"],
+  },
 };
 
 export default function RootLayout({
