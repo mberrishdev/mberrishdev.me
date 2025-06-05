@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "id": 7,
+      "title": "TBC Bank - Exchange Rate offer",
+      "description": "A portal enabling customers to request specific exchange rates, with automated and manual validation across web, mobile, and branch channels.",
+      "technologies": [".NET 8", "SQL Server", "React", "RabbitMQ"],
+      "githubLink": "#"
+    },
+    {
+      "id": 8,
+      "title": "TBC Bank - Rate Engine",
+      "description": "Build rate engine, to manage exchange, commercial, individual rates.Optimized the performance of it to reliably handle high-volume financial transactions.",
+      "technologies": ["SignalR", "Redis", "RabbitMQ", "SQL Server", ".NET"],
+      "githubLink": "#"
+    },
+    {
+      "id": 9,
+      "title": "TBC Bank - Jira API Automation Tool",
+      "description": "A tool to auto-create and track Jira tasks, improving project management efficiency across departments.",
+      "technologies": [".NET", "Jira API", "RabbitMQ"],
+      "githubLink": "#"
+    },
+    {
+      "id": 10,
+      "title": "TBC Bank - Company Libraries",
+      "description": "Contributed to reusable internal libraries, including the implementation of a RabbitMQ idempotency checker and common templates, improving standardization and efficiency across multiple projects.",
+      "technologies": [".NET", "C#", "RabbitMQ"],
+      "githubLink": "#"
+    }
+  ]
+} 

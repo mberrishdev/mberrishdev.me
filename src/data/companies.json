@@ -1,0 +1,41 @@
+{
+  "companies": [
+    {
+      "name": "TBC Bank",
+      "logo": "/companies/tbc.png",
+      "role": "Software Developer",
+      "link": "https://tbc.ge/"
+    },
+    {
+      "name": "EasyDine",
+      "logo": "/companies/easydine.jpeg",
+      "role": "Full Stack Enginner",
+      "link": "https://easydine.ge/"
+    },
+    {
+      "name": "SmatSoft Gaming",
+      "logo": "/companies/smatsoft.webp",
+      "role": "Software Developer",
+      "link": "https://www.smartsoftgaming.com/"
+    },
+    {
+      "name": "Proxima Sollution",
+      "logo": "/companies/proxima.jpeg",
+      "role": "Software Developer",
+      "link": "https://www.proxima.solutions/"
+    },
+    {
+      "name": "Multipay",
+      "logo": "/companies/multipay.png",
+      "role": "Software Developer",
+      "link": "https://multipay.ge/"
+    },
+    {
+      "name": "Topwork",
+      "logo": "/companies/topwork.jpg",
+      "role": "Full Stack Enginner",
+      "link": "https://topwork.ge/"
+    }
+  ]
+} 
+
