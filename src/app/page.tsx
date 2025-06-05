@@ -62,7 +62,7 @@ export default function Home() {
                     alt={company.name}
                     width={80}
                     height={80}
-                    className="object-contain"
+                    className="object-contain rounded-lg"
                   />
                 </div>
                 <div className="space-y-1">
