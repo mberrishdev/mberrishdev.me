@@ -27,6 +27,27 @@
       "description": "Contributed to reusable internal libraries, including the implementation of a RabbitMQ idempotency checker and common templates, improving standardization and efficiency across multiple projects.",
       "technologies": [".NET", "C#", "RabbitMQ"],
       "githubLink": "#"
+    },
+    {
+      "id": 11,
+      "title": ".Net Template",
+      "description": "MB.Template – Clean Architecture for .NET. A Clean Architecture solution template for .NET projects. This template includes all key layers to help you start building scalable applications faster: API, Application, Domain, Infrastructure, and Persistence.",
+      "technologies": [".NET", "C#"],
+      "githubLink": "https://github.com/mberrishdev/Net.Template"
+    },
+    {
+      "id": 12,
+      "title": "NotifyHub",
+      "description": "NotifyHub is a real-time notification system built with ASP.NET Core and SignalR, designed to provide efficient and scalable group-based notifications. It's perfect for applications that need to send targeted notifications to specific user groups or roles.",
+      "technologies": [".NET", "C#", "SignalR"],
+      "githubLink": "https://github.com/mberrishdev/NotifyHub"
+    },
+    {
+      "id": 13,
+      "title": "Common.Repository",
+      "description": "Common repository and unit of work pattern for .NET projects.",
+      "technologies": [".NET", "C#", "EF Core", "SQL Server"],
+      "githubLink": "https://github.com/mberrishdev/Common.Repository"
     }
   ]
-} 
+}

@@ -35,6 +35,12 @@
       "logo": "/companies/topwork.jpg",
       "role": "Full Stack Enginner",
       "link": "https://topwork.ge/"
+    },
+    {
+      "name": "Tianshan",
+      "logo": "/companies/tianshan.png",
+      "role": "Full Stack Enginner",
+      "link": "https://tianshan.space/"
     }
   ]
 } 
