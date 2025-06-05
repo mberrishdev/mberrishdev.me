@@ -1,6 +1,7 @@
 import projectsData from "@/data/projects.json";
 import companiesData from "@/data/companies.json";
 import Image from "next/image";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
   return (
@@ -194,6 +195,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <ScrollToTopButton />
     </div>
   );
 }
