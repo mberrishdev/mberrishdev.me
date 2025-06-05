@@ -1,29 +1,30 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import meta from "@/data/meta.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mikheil Berishvili – Portfolio",
-  description: "Full-Stack Developer from Georgia 🇬🇪",
+  title: meta.title,
+  description: meta.description,
   openGraph: {
-    title: "Mikheil Berishvili – Portfolio",
-    description: "Full-Stack Developer from Georgia 🇬🇪",
+    title: meta.title,
+    description: meta.description,
     images: [
       {
-        url: "/me.jpeg",
+        url: meta.ogImage,
         width: 1200,
         height: 630,
-        alt: "Mikheil Berishvili Portfolio",
+        alt: meta.title,
       },
     ],
+    url: meta.siteUrl,
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Mikheil Berishvili – Portfolio",
-    description: "Full-Stack Developer from Georgia 🇬🇪",
-    images: ["/me.png"],
+    title: meta.title,
+    description: meta.description,
+    images: [meta.ogImage],
   },
 };
 

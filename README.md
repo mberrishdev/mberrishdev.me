@@ -1,37 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mikheil Berishvili – Portfolio
+
+A minimal, elegant, and responsive personal portfolio built with Next.js and Tailwind CSS.
+
+## Features
+- Clean, modern design with good spacing and clear typography
+- Responsive layout for all devices
+- Intro section with name, bio, and contact info
+- Companies section with logos and roles
+- Projects section loaded from GitHub and custom highlights
+- Scroll-to-top button for easy navigation
+- Social/meta image for sharing (Open Graph & Twitter)
+- **Easy meta tag customization via JSON**
+
+## Tech Stack
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+3. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+- `src/app/` – Main app and page components
+- `src/data/companies.json` – Companies data
+- `src/data/meta.json` – Site meta tags (title, description, social image, etc.)
+- `src/components/ScrollToTopButton.tsx` – Scroll-to-top button
+- `public/companies/` – Company logos
+- `public/og-image.png` – Social/meta image (update as needed)
+
+## Customization
+- Update your info in `src/data/companies.json` and project data source
+- **Update site meta tags in `src/data/meta.json`** (title, description, Open Graph/Twitter image, etc.)
+- Replace `public/og-image.png` with your own Open Graph image for better social sharing
+
+## Meta Tag Customization
+All meta tags (title, description, Open Graph/Twitter image, etc.) are managed in `src/data/meta.json`. Just edit this file to update your site's meta info for SEO and social sharing. No code changes needed!
+
+Example `src/data/meta.json`:
+```json
+{
+  "title": "Mikheil Berishvili – Portfolio",
+  "description": "Full-Stack Developer from Georgia 🇬🇪",
+  "ogImage": "/og-image.png",
+  "twitterHandle": "@mberrishdev",
+  "siteUrl": "https://mberrishdev.me"
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
+- **Email:** [mikheil.berishvili@outlook.com](mailto:mikheil.berishvili@outlook.com)
+- **LinkedIn:** [linkedin.com/in/mberrishdev](https://linkedin.com/in/mberrishdev)
+- **Phone:** +995 591 30 05 69
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# mberrishdev.me
