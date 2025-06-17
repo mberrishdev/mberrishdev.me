@@ -31,6 +31,15 @@ export default function Home() {
             >
               Contact Me
             </a>
+            <a
+              href="https://drive.google.com/file/d/1QR_PPOrvlvbuviV599d55Y_YaoaAYSSg/view?usp=sharing"
+              className="btn-secondary"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
       </section>
