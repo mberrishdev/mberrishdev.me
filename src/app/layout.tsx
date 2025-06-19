@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import meta from "@/data/meta.json";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -138,6 +139,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
           <main className="max-w-6xl mx-auto px-6 py-16 sm:py-24 lg:px-8">
             {children}
+            <Analytics />
           </main>
         </div>
       </body>
