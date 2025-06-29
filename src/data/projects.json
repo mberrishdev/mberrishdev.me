@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "id": 1,
+      "title": "SpendWise",
+      "description": "SpendWise is a web application that allows users to manage their finances and track their spending. It is built with React and TypeScript and uses firebase for authentication and storage.",
+      "technologies": ["React", "TypeScript", "Firebase"],
+      "githubLink": "https://github.com/mberrishdev/spend-wise"
+    },
+    {
       "id": 6,
       "title": "HubDocs",
       "description": "HubDocs is a powerful tool for exploring and documenting SignalR hubs in your ASP.NET Core applications. It provides a beautiful, Swagger-like UI that automatically discovers and displays all your SignalR hubs and their methods.",
