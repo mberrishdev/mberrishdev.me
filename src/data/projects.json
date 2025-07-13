@@ -5,63 +5,72 @@
       "title": "SpendWise",
       "description": "SpendWise is a web application that allows users to manage their finances and track their spending. It is built with React and TypeScript and uses firebase for authentication and storage.",
       "technologies": ["React", "TypeScript", "Firebase"],
-      "githubLink": "https://github.com/mberrishdev/spend-wise"
+      "githubLink": "https://github.com/mberrishdev/spend-wise",
+      "liveLink": "https://spendwise.mberrishdev.me/"
     },
     {
       "id": 6,
       "title": "HubDocs",
       "description": "HubDocs is a powerful tool for exploring and documenting SignalR hubs in your ASP.NET Core applications. It provides a beautiful, Swagger-like UI that automatically discovers and displays all your SignalR hubs and their methods.",
       "technologies": [".NET 8", "SignalR"],
-      "githubLink": "https://github.com/mberrishdev/HubDocs"
+      "githubLink": "https://github.com/mberrishdev/HubDocs",
+      "liveLink": "https://github.com/mberrishdev/HubDocs"
     },
     {
       "id": 7,
       "title": "TBC Bank - Exchange Rate offer",
       "description": "A portal enabling customers to request specific exchange rates, with automated and manual validation across web, mobile, and branch channels.",
       "technologies": [".NET 8", "SQL Server", "RabbitMQ"],
-      "githubLink": "#"
+      "githubLink": "#",
+      "liveLink": "#"
     },
     {
       "id": 8,
       "title": "TBC Bank - Rate Engine",
       "description": "Build rate engine, to manage exchange, commercial, individual rates.Optimized the performance of it to reliably handle high-volume financial transactions.",
       "technologies": ["SignalR", "Redis", "RabbitMQ", "SQL Server", ".NET"],
-      "githubLink": "#"
+      "githubLink": "#",
+      "liveLink": "#"
     },
     {
       "id": 9,
       "title": "TBC Bank - Jira API Automation Tool",
       "description": "A tool to auto-create and track Jira tasks, improving project management efficiency across departments.",
       "technologies": [".NET", "Jira API", "RabbitMQ"],
-      "githubLink": "#"
+      "githubLink": "#",
+      "liveLink": "#"
     },
     {
       "id": 10,
       "title": "TBC Bank - Company Libraries",
       "description": "Contributed to reusable internal libraries, including the implementation of a RabbitMQ idempotency checker and common templates, improving standardization and efficiency across multiple projects.",
       "technologies": [".NET", "C#", "RabbitMQ"],
-      "githubLink": "#"
+      "githubLink": "#",
+      "liveLink": "#"
     },
     {
       "id": 11,
       "title": ".Net Template",
       "description": "MB.Template – Clean Architecture for .NET. A Clean Architecture solution template for .NET projects. This template includes all key layers to help you start building scalable applications faster: API, Application, Domain, Infrastructure, and Persistence.",
       "technologies": [".NET", "C#"],
-      "githubLink": "https://github.com/mberrishdev/Net.Template"
+      "githubLink": "https://github.com/mberrishdev/Net.Template",
+      "liveLink": "https://github.com/mberrishdev/Net.Template"
     },
     {
       "id": 12,
       "title": "NotifyHub",
       "description": "NotifyHub is a real-time notification system built with ASP.NET Core and SignalR, designed to provide efficient and scalable group-based notifications. It's perfect for applications that need to send targeted notifications to specific user groups or roles.",
       "technologies": [".NET", "C#", "SignalR"],
-      "githubLink": "https://github.com/mberrishdev/NotifyHub"
+      "githubLink": "https://github.com/mberrishdev/NotifyHub",
+      "liveLink": "https://github.com/mberrishdev/NotifyHub"
     },
     {
       "id": 13,
       "title": "Common.Repository",
       "description": "Common repository and unit of work pattern for .NET projects.",
       "technologies": [".NET", "C#", "EF Core", "SQL Server"],
-      "githubLink": "https://github.com/mberrishdev/Common.Repository"
+      "githubLink": "https://github.com/mberrishdev/Common.Repository",
+      "liveLink": "https://github.com/mberrishdev/Common.Repository"
     }
   ]
 }
