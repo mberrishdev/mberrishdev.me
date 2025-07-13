@@ -14,7 +14,7 @@
       "description": "HubDocs is a powerful tool for exploring and documenting SignalR hubs in your ASP.NET Core applications. It provides a beautiful, Swagger-like UI that automatically discovers and displays all your SignalR hubs and their methods.",
       "technologies": [".NET 8", "SignalR"],
       "githubLink": "https://github.com/mberrishdev/HubDocs",
-      "liveLink": "https://github.com/mberrishdev/HubDocs"
+      "liveLink": "https://hubdocs.mberrishdev.me/"
     },
     {
       "id": 7,
