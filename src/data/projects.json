@@ -9,6 +9,14 @@
       "liveLink": "https://spendwise.mberrishdev.me/"
     },
     {
+      "id": 14,
+      "title": "RepoPulse",
+      "description": "RepoPulse is a modern dashboard for monitoring, managing, and triggering CI/CD pipelines and Renovate PRs across multiple repositories in Azure DevOps. It provides a unified UI for DevOps teams to track repository health, automate dependency updates, and manage build pipelines.",
+      "technologies": ["React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS", "Lucide", "Azure DevOps"],
+      "githubLink": "https://github.com/mberrishdev/repo-pulse",
+      "liveLink": "https://repopulse.mberrishdev.me/"
+    },
+    {
       "id": 6,
       "title": "HubDocs",
       "description": "HubDocs is a powerful tool for exploring and documenting SignalR hubs in your ASP.NET Core applications. It provides a beautiful, Swagger-like UI that automatically discovers and displays all your SignalR hubs and their methods.",
