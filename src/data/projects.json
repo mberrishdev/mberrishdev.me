@@ -12,7 +12,7 @@
       "id": 14,
       "title": "RepoPulse",
       "description": "RepoPulse is a modern dashboard for monitoring, managing, and triggering CI/CD pipelines and Renovate PRs across multiple repositories in Azure DevOps. It provides a unified UI for DevOps teams to track repository health, automate dependency updates, and manage build pipelines.",
-      "technologies": ["React", "TypeScript", "Vite", "shadcn-ui", "Tailwind CSS", "Lucide", "Azure DevOps"],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Azure DevOps"],
       "githubLink": "https://github.com/mberrishdev/repo-pulse",
       "liveLink": "https://repopulse.mberrishdev.me/"
     },
