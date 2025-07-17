@@ -6,7 +6,7 @@
         "description": "A .NET global CLI tool to rapidly generate CQRS and Clean Architecture components such as commands, queries, handlers, classes, and interfaces. Streamline your development workflow and enforce best practices with customizable templates and configuration.",
         "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
         "githubLink": "https://github.com/mberrishdev/dct",
-        "liveLink": "https://www.nuget.org/packages/dct",
+        "liveLink": "https://www.nuget.org/packages/dct"
     },
     {
       "id": 1,
