@@ -15,7 +15,7 @@
       "technologies": ["NestJS", "Pixi.js", "Socket.io", "JavaScript", "HTML", "CSS"],
       "githubLink": "https://github.com/mberrishdev/fruit-ninja",
       "liveLink": "https://fruitninja.mberrishdev.me"
-    }
+    },
     {
       "id": 1,
       "title": "SpendWise",
