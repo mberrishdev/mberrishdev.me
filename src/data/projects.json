@@ -9,6 +9,14 @@
         "liveLink": "https://www.nuget.org/packages/dct"
     },
     {
+      "id": 15,
+      "title": "Fruit Ninja - Multiplayer Game",
+      "description": "A real-time multiplayer fruit ninja game with room-based gameplay, built with a NestJS backend and Pixi.js frontend. Players create or join rooms, slice fruits on a real-time 100x100 grid, and compete on a live leaderboard. Features include responsive design, performance optimization, real-time health dashboard, and mobile-ready touch controls.",
+      "technologies": ["NestJS", "Pixi.js", "Socket.io", "JavaScript", "HTML", "CSS"],
+      "githubLink": "https://github.com/mberrishdev/fruit-ninja",
+      "liveLink": "https://fruitninja.mberrishdev.me"
+    }
+    {
       "id": 1,
       "title": "SpendWise",
       "description": "SpendWise is a web application that allows users to manage their finances and track their spending. It is built with React and TypeScript and uses firebase for authentication and storage.",
