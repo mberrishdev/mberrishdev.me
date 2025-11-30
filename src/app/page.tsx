@@ -32,7 +32,7 @@ export default function Home() {
               Contact Me
             </a>
             <a
-              href="https://drive.google.com/file/d/1QR_PPOrvlvbuviV599d55Y_YaoaAYSSg/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PKL2O3Jd1YmBL4gNkTghjmIyMU7TcfTZ/view?usp=sharing"
               className="btn-secondary"
               download
               target="_blank"
