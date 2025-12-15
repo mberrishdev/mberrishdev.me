@@ -1,26 +1,33 @@
 {
   "projects": [
     {
-        "id": 16,
-        "title": "clipai",
-        "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Wish Semantic Serach and OpenAi LLM model, user can search data from history",
-        "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
-        "githubLink": "https://github.com/mberrishdev/clipai",
-        "liveLink": "#"
+      "id": 17,
+      "title": "clipai",
+      "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Wish Semantic Serach and OpenAi LLM model, user can search data from history",
+      "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
+      "githubLink": "https://github.com/mberrishdev/clipai",
+      "liveLink": "#"
     },
     {
-        "id": 12,
-        "title": "dct (Dotnet CLI Tool)",
-        "description": "A .NET global CLI tool to rapidly generate CQRS and Clean Architecture components such as commands, queries, handlers, classes, and interfaces. Streamline your development workflow and enforce best practices with customizable templates and configuration.",
-        "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
-        "githubLink": "https://github.com/mberrishdev/dct",
-        "liveLink": "https://www.nuget.org/packages/dct"
+      "id": 16,
+      "title": "dct (Dotnet CLI Tool)",
+      "description": "A .NET global CLI tool to rapidly generate CQRS and Clean Architecture components such as commands, queries, handlers, classes, and interfaces. Streamline your development workflow and enforce best practices with customizable templates and configuration.",
+      "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
+      "githubLink": "https://github.com/mberrishdev/dct",
+      "liveLink": "https://www.nuget.org/packages/dct"
     },
     {
       "id": 15,
       "title": "Fruit Ninja - Multiplayer Game",
       "description": "A real-time multiplayer fruit ninja game with room-based gameplay, built with a NestJS backend and Pixi.js frontend. Players create or join rooms, slice fruits on a real-time 100x100 grid, and compete on a live leaderboard. Features include responsive design, performance optimization, real-time health dashboard, and mobile-ready touch controls.",
-      "technologies": ["NestJS", "Pixi.js", "Socket.io", "JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "NestJS",
+        "Pixi.js",
+        "Socket.io",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "githubLink": "https://github.com/mberrishdev/fruit-ninja",
       "liveLink": "https://fruitninja.mberrishdev.me"
     },
@@ -36,7 +43,13 @@
       "id": 14,
       "title": "RepoPulse",
       "description": "RepoPulse is a modern dashboard for monitoring, managing, and triggering CI/CD pipelines and Renovate PRs across multiple repositories in Azure DevOps. It provides a unified UI for DevOps teams to track repository health, automate dependency updates, and manage build pipelines.",
-      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Azure DevOps"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Azure DevOps"
+      ],
       "githubLink": "https://github.com/mberrishdev/repo-pulse",
       "liveLink": "https://repopulse.mberrishdev.me/"
     },
