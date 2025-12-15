@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+        "id": 16,
+        "title": "clipai",
+        "description": "A modern macOS clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI.",
+        "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
+        "githubLink": "https://github.com/mberrishdev/clipai",
+        "liveLink": "#"
+    },
+    {
         "id": 12,
         "title": "dct (Dotnet CLI Tool)",
         "description": "A .NET global CLI tool to rapidly generate CQRS and Clean Architecture components such as commands, queries, handlers, classes, and interfaces. Streamline your development workflow and enforce best practices with customizable templates and configuration.",
