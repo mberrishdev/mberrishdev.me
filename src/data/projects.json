@@ -3,7 +3,7 @@
     {
       "id": 17,
       "title": "clipai",
-      "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Wish Semantic Serach and OpenAi LLM model, user can search data from history",
+      "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Features semantic search powered by OpenAI LLM to intelligently search through clipboard history.",
       "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
       "githubLink": "https://github.com/mberrishdev/clipai",
       "liveLink": "#"

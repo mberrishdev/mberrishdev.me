@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords: [
     "Mikheil Berishvili",
     "mberrish",
-    "developemnt",
+    "development",
     "georgia",
     "full-stack developer",
     "Portfolio",

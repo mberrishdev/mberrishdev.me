@@ -9,7 +9,7 @@
     {
       "name": "EasyDine",
       "logo": "/companies/easydine.jpeg",
-      "role": "Full Stack Enginner",
+      "role": "Full Stack Engineer",
       "link": "https://easydine.ge/"
     },
     {
@@ -19,7 +19,7 @@
       "link": "https://www.smartsoftgaming.com/"
     },
     {
-      "name": "Proxima Sollution",
+      "name": "Proxima Solution",
       "logo": "/companies/proxima.jpeg",
       "role": "Software Developer",
       "link": "https://www.proxima.solutions/"
@@ -33,13 +33,13 @@
     {
       "name": "Topwork",
       "logo": "/companies/topwork.jpg",
-      "role": "Full Stack Enginner",
+      "role": "Full Stack Engineer",
       "link": "https://topwork.ge/"
     },
     {
       "name": "Tianshan",
       "logo": "/companies/tianshan.png",
-      "role": "Full Stack Enginner",
+      "role": "Full Stack Engineer",
       "link": "https://tianshan.space/"
     }
   ]
