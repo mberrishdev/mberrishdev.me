@@ -11,7 +11,7 @@
     {
       "id": 16,
       "title": "dct (Dotnet CLI Tool)",
-      "description": "A .NET global CLI tool to rapidly generate CQRS and Clean Architecture components such as commands, queries, handlers, classes, and interfaces. Streamline your development workflow and enforce best practices with customizable templates and configuration.",
+      "description": "A .NET global CLI tool that accelerates CQRS and Clean Architecture development. Rapidly generates commands, queries, handlers, and interfaces with customizable templates, enforcing best practices and boosting developer productivity.",
       "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
       "githubLink": "https://github.com/mberrishdev/dct",
       "liveLink": "https://www.nuget.org/packages/dct"
@@ -19,7 +19,7 @@
     {
       "id": 15,
       "title": "Fruit Ninja - Multiplayer Game",
-      "description": "A real-time multiplayer fruit ninja game with room-based gameplay, built with a NestJS backend and Pixi.js frontend. Players create or join rooms, slice fruits on a real-time 100x100 grid, and compete on a live leaderboard. Features include responsive design, performance optimization, real-time health dashboard, and mobile-ready touch controls.",
+      "description": "Real-time multiplayer fruit slicing game with room-based gameplay. Built with NestJS and Pixi.js, featuring a 100x100 grid system, live leaderboards, and WebSocket synchronization. Optimized for performance with mobile touch controls and responsive design.",
       "technologies": [
         "NestJS",
         "Pixi.js",
@@ -34,7 +34,7 @@
     {
       "id": 1,
       "title": "SpendWise",
-      "description": "SpendWise is a web application that allows users to manage their finances and track their spending. It is built with React and TypeScript and uses firebase for authentication and storage.",
+      "description": "Personal finance management application for tracking expenses and budgets. Features secure Firebase authentication, real-time data synchronization, and intuitive expense categorization built with React and TypeScript.",
       "technologies": ["React", "TypeScript", "Firebase"],
       "githubLink": "https://github.com/mberrishdev/spend-wise",
       "liveLink": "https://spendwise.mberrishdev.me/"
@@ -42,7 +42,7 @@
     {
       "id": 14,
       "title": "RepoPulse",
-      "description": "RepoPulse is a modern dashboard for monitoring, managing, and triggering CI/CD pipelines and Renovate PRs across multiple repositories in Azure DevOps. It provides a unified UI for DevOps teams to track repository health, automate dependency updates, and manage build pipelines.",
+      "description": "Unified dashboard for monitoring and managing CI/CD pipelines across multiple Azure DevOps repositories. Enables DevOps teams to track repository health, automate dependency updates with Renovate, and trigger builds from a single interface.",
       "technologies": [
         "React",
         "TypeScript",
@@ -56,15 +56,15 @@
     {
       "id": 6,
       "title": "HubDocs",
-      "description": "HubDocs is a powerful tool for exploring and documenting SignalR hubs in your ASP.NET Core applications. It provides a beautiful, Swagger-like UI that automatically discovers and displays all your SignalR hubs and their methods.",
+      "description": "API documentation tool for SignalR hubs in ASP.NET Core applications. Provides a Swagger-like UI that automatically discovers and documents all SignalR hubs and their methods, simplifying real-time API exploration.",
       "technologies": [".NET 8", "SignalR"],
       "githubLink": "https://github.com/mberrishdev/HubDocs",
       "liveLink": "https://hubdocs.mberrishdev.me/"
     },
     {
       "id": 7,
-      "title": "TBC Bank - Exchange Rate offer",
-      "description": "A portal enabling customers to request specific exchange rates, with automated and manual validation across web, mobile, and branch channels.",
+      "title": "TBC Bank - Exchange Rate Portal",
+      "description": "Enterprise portal enabling customers to request personalized exchange rates across web, mobile, and branch channels. Features automated validation workflows, manual approval processes, and real-time rate synchronization.",
       "technologies": [".NET 8", "SQL Server", "RabbitMQ"],
       "githubLink": "#",
       "liveLink": "#"
@@ -72,31 +72,31 @@
     {
       "id": 8,
       "title": "TBC Bank - Rate Engine",
-      "description": "Build rate engine, to manage exchange, commercial, individual rates.Optimized the performance of it to reliably handle high-volume financial transactions.",
+      "description": "High-performance rate engine managing exchange, commercial, and individual rates. Optimized to reliably process high-volume financial transactions with Redis caching and real-time SignalR updates.",
       "technologies": ["SignalR", "Redis", "RabbitMQ", "SQL Server", ".NET"],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 9,
-      "title": "TBC Bank - Jira API Automation Tool",
-      "description": "A tool to auto-create and track Jira tasks, improving project management efficiency across departments.",
+      "title": "TBC Bank - Jira Automation Tool",
+      "description": "Automated task management system that creates and tracks Jira tickets across departments. Integrates with internal systems via RabbitMQ to streamline project management workflows.",
       "technologies": [".NET", "Jira API", "RabbitMQ"],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 10,
-      "title": "TBC Bank - Company Libraries",
-      "description": "Contributed to reusable internal libraries, including the implementation of a RabbitMQ idempotency checker and common templates, improving standardization and efficiency across multiple projects.",
+      "title": "TBC Bank - Internal Libraries",
+      "description": "Developed reusable internal libraries including RabbitMQ idempotency checker and common templates. Improved code standardization and development efficiency across multiple enterprise projects.",
       "technologies": [".NET", "C#", "RabbitMQ"],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 11,
-      "title": ".Net Template",
-      "description": "MB.Template – Clean Architecture for .NET. A Clean Architecture solution template for .NET projects. This template includes all key layers to help you start building scalable applications faster: API, Application, Domain, Infrastructure, and Persistence.",
+      "title": ".NET Clean Architecture Template",
+      "description": "Production-ready Clean Architecture solution template for .NET projects. Includes API, Application, Domain, Infrastructure, and Persistence layers with best practices baked in, accelerating scalable application development.",
       "technologies": [".NET", "C#"],
       "githubLink": "https://github.com/mberrishdev/Net.Template",
       "liveLink": "https://github.com/mberrishdev/Net.Template"
@@ -104,7 +104,7 @@
     {
       "id": 12,
       "title": "NotifyHub",
-      "description": "NotifyHub is a real-time notification system built with ASP.NET Core and SignalR, designed to provide efficient and scalable group-based notifications. It's perfect for applications that need to send targeted notifications to specific user groups or roles.",
+      "description": "Scalable real-time notification system built with ASP.NET Core and SignalR. Enables efficient group-based notifications with support for targeted messaging to specific user groups and roles.",
       "technologies": [".NET", "C#", "SignalR"],
       "githubLink": "https://github.com/mberrishdev/NotifyHub",
       "liveLink": "https://github.com/mberrishdev/NotifyHub"
@@ -112,7 +112,7 @@
     {
       "id": 13,
       "title": "Common.Repository",
-      "description": "Common repository and unit of work pattern for .NET projects.",
+      "description": "Reusable repository and unit of work pattern implementation for .NET projects. Simplifies data access layer development with Entity Framework Core and promotes consistent database operations.",
       "technologies": [".NET", "C#", "EF Core", "SQL Server"],
       "githubLink": "https://github.com/mberrishdev/Common.Repository",
       "liveLink": "https://github.com/mberrishdev/Common.Repository"

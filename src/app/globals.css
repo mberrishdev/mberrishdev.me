@@ -17,17 +17,25 @@
   .gradient-bg {
     @apply bg-gradient-to-br from-blue-50 via-white to-purple-50;
   }
-  
+
   .card {
-    @apply relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm border border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-gray-300 hover:-translate-y-1;
+    @apply relative overflow-hidden rounded-2xl bg-white p-8 shadow-sm border border-gray-200 transition-all duration-300 ease-out hover:shadow-xl hover:border-gray-300 hover:-translate-y-1.5;
   }
-  
+
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors;
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50;
   }
-  
+
   .btn-secondary {
-    @apply inline-flex items-center px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors;
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200 focus:ring-opacity-50;
+  }
+
+  .section-heading {
+    @apply text-3xl font-bold tracking-tight text-gray-900;
+  }
+
+  .section-description {
+    @apply text-lg text-gray-600 leading-relaxed;
   }
 }
 
