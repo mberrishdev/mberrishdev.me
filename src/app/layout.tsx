@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import meta from "@/data/meta.json";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(meta.siteUrl),
@@ -25,27 +25,13 @@ export const metadata: Metadata = {
     "Full-Stack Developer",
     "Georgia",
   ],
-  authors: [
-    { name: "Mikheil Berishvili", url: meta.siteUrl }
-  ],
+  authors: [{ name: "Mikheil Berishvili", url: meta.siteUrl }],
   creator: "Mikheil Berishvili",
   publisher: "Mikheil Berishvili",
-  formatDetection: {
-    email: true,
-    address: false,
-    telephone: true
-  },
+  formatDetection: { email: true, address: false, telephone: true },
   category: "technology",
-  alternates: {
-    canonical: meta.siteUrl,
-    languages: {
-      "en-US": meta.siteUrl
-    }
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico"
-  },
+  alternates: { canonical: meta.siteUrl, languages: { "en-US": meta.siteUrl } },
+  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
   manifest: "/manifest.json",
   robots: {
     index: true,
@@ -57,8 +43,8 @@ export const metadata: Metadata = {
       noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     title: meta.title,
@@ -71,15 +57,15 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "Mikheil Berishvili - Full-Stack Developer Portfolio",
-        type: "image/webp"
-      }
+        type: "image/webp",
+      },
     ],
     locale: "en_US",
     type: "profile",
     firstName: "Mikheil",
     lastName: "Berishvili",
     username: "mberrishdev",
-    gender: "male"
+    gender: "male",
   },
   twitter: {
     card: "summary_large_image",
@@ -89,50 +75,15 @@ export const metadata: Metadata = {
     site: "@mberrishdev",
     images: {
       url: meta.ogImage.startsWith("http") ? meta.ogImage : meta.siteUrl + meta.ogImage,
-      alt: "Mikheil Berishvili - Full-Stack Developer Portfolio"
-    }
-  },
-  facebook: {
-    appId: ""
-  },
-  pinterest: {
-    richPin: true
-  },
-  verification: {
-    google: "",
-    yandex: "",
-    yahoo: "",
-    other: {
-      me: ["mikheil.berishvili@outlook.com"]
-    }
-  },
-  appLinks: {
-    ios: {
-      url: meta.siteUrl,
-      app_store_id: ""
+      alt: "Mikheil Berishvili - Full-Stack Developer Portfolio",
     },
-    android: {
-      package: "",
-      app_name: "Mikheil Berishvili Portfolio"
-    },
-    web: {
-      url: meta.siteUrl,
-      should_fallback: true
-    }
   },
-  archives: [],
-  assets: [],
-  bookmarks: [],
-  other: {
-    custom: "meta"
-  }
+  verification: { other: { me: ["mikheil.berishvili@outlook.com"] } },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -145,58 +96,16 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/mberrishdev",
       "https://linkedin.com/in/mberrishdev",
-      "https://linkedin.com/in/mberrish",
     ],
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "GE",
-      addressLocality: "Georgia"
-    },
+    address: { "@type": "PostalAddress", addressCountry: "GE", addressLocality: "Georgia" },
     email: "mikheil.berishvili@outlook.com",
     telephone: "+995591300569",
     knowsAbout: [
-      ".NET",
-      "C#",
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "Node.js",
-      "Next.js",
-      "SQL Server",
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
-      "RabbitMQ",
-      "SignalR",
-      "Microservices",
-      "Cloud Computing",
-      "Azure",
-      "DevOps",
-      "Clean Architecture",
-      "CQRS",
-      "System Design"
+      ".NET", "C#", "React", "TypeScript", "JavaScript", "Node.js", "Next.js",
+      "SQL Server", "PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "SignalR",
+      "Microservices", "Cloud Computing", "Azure", "DevOps", "Clean Architecture",
+      "CQRS", "System Design",
     ],
-    alumniOf: {
-      "@type": "Organization",
-      name: "TBC Bank"
-    },
-    worksFor: [
-      {
-        "@type": "Organization",
-        name: "TBC Bank",
-        url: "https://tbc.ge/"
-      },
-      {
-        "@type": "Organization",
-        name: "EasyDine",
-        url: "https://easydine.ge/"
-      },
-      {
-        "@type": "Organization",
-        name: "SmartSoft Gaming",
-        url: "https://www.smartsoftgaming.com/"
-      }
-    ]
   };
 
   return (
@@ -215,13 +124,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.className} bg-white text-gray-900 antialiased`}>
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-          <main className="max-w-6xl mx-auto px-6 py-16 sm:py-24 lg:px-8">
-            {children}
-            <Analytics />
-          </main>
-        </div>
+      <body className={dmSans.className}>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

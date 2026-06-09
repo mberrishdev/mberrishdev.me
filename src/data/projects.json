@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "id": 20,
+      "title": "Camus",
+      "description": "AI-powered text rewriter for macOS. Select any text anywhere on your Mac and instantly rewrite it with AI — without switching apps or copying to a browser.",
+      "technologies": ["macOS", "Swift", "AI"],
+      "githubLink": "#",
+      "liveLink": "https://getcamus.app"
+    },
+    {
+      "id": 19,
+      "title": "Wormhole",
+      "description": "Lightweight self-hosted tunnel that exposes a local port to the public internet via an SSH relay server — no third-party services required, similar to ngrok but fully under your control.",
+      "technologies": ["Go", "SSH"],
+      "githubLink": "https://github.com/mberrishdev/wormhole",
+      "liveLink": "#"
+    },
+    {
+      "id": 18,
+      "title": "Xarji",
+      "description": "Self-hosted finance manager for Georgian banks. Reads bank SMS notifications from your Mac's Messages app, parses transaction details, and syncs them to your own InstantDB instance — giving you a real-time dashboard with analytics and category breakdowns. Your data never touches third-party servers.",
+      "technologies": ["macOS", "InstantDB", "TypeScript"],
+      "githubLink": "https://github.com/tornikegomareli/Xarji",
+      "liveLink": "https://xarji.app/"
+    },
+    {
       "id": 17,
       "title": "clipai",
       "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Features semantic search powered by OpenAI LLM to intelligently search through clipboard history.",
