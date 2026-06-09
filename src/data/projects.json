@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "id": 21,
+      "title": "Versume",
+      "description": "CV editor backed by GitHub — every save is a git commit. Build multiple CV variants, restore any version, live preview, and export to PDF. Built with Next.js, GitHub OAuth, and Octokit.",
+      "technologies": ["Next.js", "TypeScript", "GitHub API", "NextAuth"],
+      "githubLink": "https://github.com/mberrishdev/versume",
+      "liveLink": "https://versume.mberrishdev.me"
+    },
+    {
       "id": 20,
       "title": "Camus",
       "description": "AI-powered text rewriter for macOS. Select any text anywhere on your Mac and instantly rewrite it with AI — without switching apps or copying to a browser.",
