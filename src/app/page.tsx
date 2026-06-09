@@ -72,6 +72,7 @@ export default function Home() {
         <nav className="glass-nav">
           <div className="glass-pill">
             <a href="#" className="active">Home</a>
+            <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -110,6 +111,30 @@ export default function Home() {
               <a href="https://linkedin.com/in/mberrishdev" target="_blank" rel="noopener noreferrer" className="gbtn">
                 LinkedIn <span className="arrow">↗</span>
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about">
+          <div className="site-container">
+            <div className="section-label reveal">About</div>
+            <div className="reveal" style={{ marginBottom: "24px" }}>
+              <p className="pdesc" style={{ fontSize: "15px", marginBottom: "12px" }}>
+                With years of experience in full-stack development, I specialize in building scalable,
+                high-performance applications that solve real-world problems. My expertise spans from
+                modern frontend frameworks to robust backend systems.
+              </p>
+              <p className="pdesc" style={{ fontSize: "15px" }}>
+                I thrive on tackling complex challenges and transforming them into elegant, maintainable
+                solutions. Whether it&apos;s architecting microservices, optimizing database performance,
+                or crafting intuitive user interfaces, I bring a meticulous approach to every project.
+              </p>
+            </div>
+            <div className="pstack reveal">
+              {[".NET & C#", "React & TypeScript", "Microservices", "Cloud & DevOps", "SQL & NoSQL", "System Design"].map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
             </div>
           </div>
         </section>
