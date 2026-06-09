@@ -26,7 +26,15 @@ export default function ScrollToTopButton() {
     >
       <button
         onClick={scrollToTop}
-        className="group p-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 text-white shadow-xl hover:from-blue-600 hover:to-purple-600 focus:outline-none focus:ring-4 focus:ring-blue-200 transition-all"
+        className="group p-4 rounded-full focus:outline-none transition-all"
+        style={{
+          background: "linear-gradient(140deg, rgba(255,255,255,0.58) 0%, rgba(255,252,245,0.32) 50%, rgba(255,255,255,0.50) 100%)",
+          backdropFilter: "blur(20px) saturate(1.4)",
+          WebkitBackdropFilter: "blur(20px) saturate(1.4)",
+          border: "1px solid rgba(255,255,255,0.48)",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.06), inset 0 1px 1px rgba(255,255,255,0.7)",
+          color: "var(--accent)",
+        }}
       >
         <svg
           width="28"
