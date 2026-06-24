@@ -95,7 +95,7 @@ export default function RootLayout({
     description: meta.description,
     sameAs: [
       "https://github.com/mberrishdev",
-      "https://linkedin.com/in/mberrishdev",
+      "https://linkedin.com/in/mberrish",
     ],
     address: { "@type": "PostalAddress", addressCountry: "GE", addressLocality: "Georgia" },
     email: "mikheil.berishvili@outlook.com",
