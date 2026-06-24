@@ -108,7 +108,7 @@ export default function Home() {
               <a href="https://github.com/mberrishdev" target="_blank" rel="noopener noreferrer" className="gbtn">
                 GitHub <span className="arrow">↗</span>
               </a>
-              <a href="https://linkedin.com/in/mberrishdev" target="_blank" rel="noopener noreferrer" className="gbtn">
+              <a href="https://linkedin.com/in/mberrish" target="_blank" rel="noopener noreferrer" className="gbtn">
                 LinkedIn <span className="arrow">↗</span>
               </a>
             </div>
