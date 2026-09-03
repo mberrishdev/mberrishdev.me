@@ -4,6 +4,7 @@ import projectsData from "@/data/projects.json";
 import companiesData from "@/data/companies.json";
 import { useEffect, useRef } from "react";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ProjectIcon from "@/components/ProjectIcon";
 
 export default function Home() {
   const orb1Ref = useRef<HTMLDivElement>(null);
@@ -171,7 +172,10 @@ export default function Home() {
             {projectsData.projects.map((project) => (
               <div key={project.id} className="project reveal">
                 <div className="project-top">
-                  <span className="pname">{project.title}</span>
+                  <span className="pname">
+                    <ProjectIcon name={project.icon} />
+                    {project.title}
+                  </span>
                   <div className="plinks">
                     {project.liveLink && project.liveLink !== "#" && (
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">

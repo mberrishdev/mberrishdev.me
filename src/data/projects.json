@@ -1,56 +1,143 @@
 {
   "projects": [
     {
+      "id": 25,
+      "title": "Notchly",
+      "icon": "panel",
+      "description": "A notch-shaped panel that docks to any edge of your desktop and fills with widgets — clock, now playing, system stats, quick launcher, clipboard history. Custom widgets are just folders of HTML, CSS and JS.",
+      "technologies": [
+        "Rust",
+        "Tauri",
+        "TypeScript"
+      ],
+      "githubLink": "https://github.com/mberrishdev/Notchly",
+      "liveLink": "#"
+    },
+    {
+      "id": 24,
+      "title": "Patchly",
+      "icon": "refresh",
+      "description": "A macOS menu bar app that scans every app you have installed and checks each one against the Mac App Store, Homebrew, or its own Sparkle feed — then tells you which ones actually have an update waiting. It never installs anything behind your back.",
+      "technologies": [
+        "Swift 6",
+        "macOS",
+        "Sparkle",
+        "Homebrew"
+      ],
+      "githubLink": "https://github.com/mberrishdev/Patchly",
+      "liveLink": "#"
+    },
+    {
+      "id": 23,
+      "title": "Readly",
+      "icon": "scan",
+      "description": "Press a hotkey, drag a rectangle over anything on screen, and the text inside is recognised and copied to your clipboard. Runs entirely on-device through Apple's Vision framework — nothing is uploaded and nothing is kept.",
+      "technologies": [
+        "Swift 6",
+        "Vision",
+        "ScreenCaptureKit",
+        "macOS"
+      ],
+      "githubLink": "https://github.com/mberrishdev/Readly",
+      "liveLink": "#"
+    },
+    {
+      "id": 22,
+      "title": "QR Generator",
+      "icon": "qr",
+      "description": "A small, fast web tool that turns any link or block of text into a QR code you can download. No account, no tracking, no upsell.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubLink": "https://github.com/mberrishdev/qr-generator",
+      "liveLink": "https://qr.mberrishdev.me"
+    },
+    {
       "id": 21,
       "title": "Versume",
+      "icon": "document",
       "description": "CV editor backed by GitHub — every save is a git commit. Build multiple CV variants, restore any version, live preview, and export to PDF. Built with Next.js, GitHub OAuth, and Octokit.",
-      "technologies": ["Next.js", "TypeScript", "GitHub API", "NextAuth"],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "GitHub API",
+        "NextAuth"
+      ],
       "githubLink": "https://github.com/mberrishdev/versume",
       "liveLink": "https://versume.mberrishdev.me"
     },
     {
       "id": 20,
       "title": "Camus",
+      "icon": "sparkle",
       "description": "AI-powered text rewriter for macOS. Select any text anywhere on your Mac and instantly rewrite it with AI — without switching apps or copying to a browser.",
-      "technologies": ["macOS", "Swift", "AI"],
+      "technologies": [
+        "macOS",
+        "Swift",
+        "AI"
+      ],
       "githubLink": "#",
       "liveLink": "https://getcamus.app"
     },
     {
       "id": 19,
       "title": "Wormhole",
+      "icon": "tunnel",
       "description": "Lightweight self-hosted tunnel that exposes a local port to the public internet via an SSH relay server — no third-party services required, similar to ngrok but fully under your control.",
-      "technologies": ["Go", "SSH"],
+      "technologies": [
+        "Go",
+        "SSH"
+      ],
       "githubLink": "https://github.com/mberrishdev/wormhole",
       "liveLink": "#"
     },
     {
       "id": 18,
       "title": "Xarji",
+      "icon": "chart",
       "description": "Self-hosted finance manager for Georgian banks. Reads bank SMS notifications from your Mac's Messages app, parses transaction details, and syncs them to your own InstantDB instance — giving you a real-time dashboard with analytics and category breakdowns. Your data never touches third-party servers.",
-      "technologies": ["macOS", "InstantDB", "TypeScript"],
+      "technologies": [
+        "macOS",
+        "InstantDB",
+        "TypeScript"
+      ],
       "githubLink": "https://github.com/tornikegomareli/Xarji",
       "liveLink": "https://xarji.app/"
     },
     {
       "id": 17,
       "title": "clipai",
+      "icon": "clipboard",
       "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Features semantic search powered by OpenAI LLM to intelligently search through clipboard history.",
-      "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
+      "technologies": [
+        "Electron",
+        "React",
+        "TypeScript",
+        "Vite",
+        "Bun"
+      ],
       "githubLink": "https://github.com/mberrishdev/clipai",
       "liveLink": "#"
     },
     {
       "id": 16,
       "title": "dct (Dotnet CLI Tool)",
+      "icon": "terminal",
       "description": "A .NET global CLI tool that accelerates CQRS and Clean Architecture development. Rapidly generates commands, queries, handlers, and interfaces with customizable templates, enforcing best practices and boosting developer productivity.",
-      "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
+      "technologies": [
+        ".NET",
+        "Spectre.Console.Cli",
+        "Scriban"
+      ],
       "githubLink": "https://github.com/mberrishdev/dct",
       "liveLink": "https://www.nuget.org/packages/dct"
     },
     {
       "id": 15,
       "title": "Fruit Ninja - Multiplayer Game",
+      "icon": "gamepad",
       "description": "Real-time multiplayer fruit slicing game with room-based gameplay. Built with NestJS and Pixi.js, featuring a 100x100 grid system, live leaderboards, and WebSocket synchronization. Optimized for performance with mobile touch controls and responsive design.",
       "technologies": [
         "NestJS",
@@ -66,14 +153,20 @@
     {
       "id": 1,
       "title": "SpendWise",
+      "icon": "wallet",
       "description": "Personal finance management application for tracking expenses and budgets. Features secure Firebase authentication, real-time data synchronization, and intuitive expense categorization built with React and TypeScript.",
-      "technologies": ["React", "TypeScript", "Firebase"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Firebase"
+      ],
       "githubLink": "https://github.com/mberrishdev/spend-wise",
       "liveLink": "https://spendwise.mberrishdev.me/"
     },
     {
       "id": 14,
       "title": "RepoPulse",
+      "icon": "pulse",
       "description": "Unified dashboard for monitoring and managing CI/CD pipelines across multiple Azure DevOps repositories. Enables DevOps teams to track repository health, automate dependency updates with Renovate, and trigger builds from a single interface.",
       "technologies": [
         "React",
@@ -88,64 +181,105 @@
     {
       "id": 6,
       "title": "HubDocs",
+      "icon": "book",
       "description": "API documentation tool for SignalR hubs in ASP.NET Core applications. Provides a Swagger-like UI that automatically discovers and documents all SignalR hubs and their methods, simplifying real-time API exploration.",
-      "technologies": [".NET 8", "SignalR"],
+      "technologies": [
+        ".NET 8",
+        "SignalR"
+      ],
       "githubLink": "https://github.com/mberrishdev/HubDocs",
       "liveLink": "https://hubdocs.mberrishdev.me/"
     },
     {
       "id": 7,
       "title": "TBC Bank - Exchange Rate Portal",
+      "icon": "exchange",
       "description": "Enterprise portal enabling customers to request personalized exchange rates across web, mobile, and branch channels. Features automated validation workflows, manual approval processes, and real-time rate synchronization.",
-      "technologies": [".NET 8", "SQL Server", "RabbitMQ"],
+      "technologies": [
+        ".NET 8",
+        "SQL Server",
+        "RabbitMQ"
+      ],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 8,
       "title": "TBC Bank - Rate Engine",
+      "icon": "gauge",
       "description": "High-performance rate engine managing exchange, commercial, and individual rates. Optimized to reliably process high-volume financial transactions with Redis caching and real-time SignalR updates.",
-      "technologies": ["SignalR", "Redis", "RabbitMQ", "SQL Server", ".NET"],
+      "technologies": [
+        "SignalR",
+        "Redis",
+        "RabbitMQ",
+        "SQL Server",
+        ".NET"
+      ],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 9,
       "title": "TBC Bank - Jira Automation Tool",
+      "icon": "check",
       "description": "Automated task management system that creates and tracks Jira tickets across departments. Integrates with internal systems via RabbitMQ to streamline project management workflows.",
-      "technologies": [".NET", "Jira API", "RabbitMQ"],
+      "technologies": [
+        ".NET",
+        "Jira API",
+        "RabbitMQ"
+      ],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 10,
       "title": "TBC Bank - Internal Libraries",
+      "icon": "package",
       "description": "Developed reusable internal libraries including RabbitMQ idempotency checker and common templates. Improved code standardization and development efficiency across multiple enterprise projects.",
-      "technologies": [".NET", "C#", "RabbitMQ"],
+      "technologies": [
+        ".NET",
+        "C#",
+        "RabbitMQ"
+      ],
       "githubLink": "#",
       "liveLink": "#"
     },
     {
       "id": 11,
       "title": ".NET Clean Architecture Template",
+      "icon": "layers",
       "description": "Production-ready Clean Architecture solution template for .NET projects. Includes API, Application, Domain, Infrastructure, and Persistence layers with best practices baked in, accelerating scalable application development.",
-      "technologies": [".NET", "C#"],
+      "technologies": [
+        ".NET",
+        "C#"
+      ],
       "githubLink": "https://github.com/mberrishdev/Net.Template",
       "liveLink": "https://github.com/mberrishdev/Net.Template"
     },
     {
       "id": 12,
       "title": "NotifyHub",
+      "icon": "bell",
       "description": "Scalable real-time notification system built with ASP.NET Core and SignalR. Enables efficient group-based notifications with support for targeted messaging to specific user groups and roles.",
-      "technologies": [".NET", "C#", "SignalR"],
+      "technologies": [
+        ".NET",
+        "C#",
+        "SignalR"
+      ],
       "githubLink": "https://github.com/mberrishdev/NotifyHub",
       "liveLink": "https://github.com/mberrishdev/NotifyHub"
     },
     {
       "id": 13,
       "title": "Common.Repository",
+      "icon": "database",
       "description": "Reusable repository and unit of work pattern implementation for .NET projects. Simplifies data access layer development with Entity Framework Core and promotes consistent database operations.",
-      "technologies": [".NET", "C#", "EF Core", "SQL Server"],
+      "technologies": [
+        ".NET",
+        "C#",
+        "EF Core",
+        "SQL Server"
+      ],
       "githubLink": "https://github.com/mberrishdev/Common.Repository",
       "liveLink": "https://github.com/mberrishdev/Common.Repository"
     }

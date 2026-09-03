@@ -389,10 +389,22 @@ section { padding: 64px 0; }
 }
 
 .pname {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 600;
   font-size: 15px;
   transition: color 0.3s ease;
 }
+
+.picon {
+  flex-shrink: 0;
+  color: var(--accent);
+  opacity: 0.65;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.project:hover .picon { opacity: 1; }
 
 .project:hover .pname { color: var(--accent); }
 
