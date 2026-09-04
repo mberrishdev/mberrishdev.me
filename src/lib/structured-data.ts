@@ -56,44 +56,23 @@ function employmentRoles() {
 
 type Project = (typeof projectsData.projects)[number];
 
-/** Projects that are real, reachable software get a node of their own. */
-function softwareNodes() {
-  return projectsData.projects
-    .filter(
-      (p: Project) =>
-        (p.liveLink && p.liveLink !== "#") ||
-        (p.githubLink && p.githubLink !== "#")
-    )
-    .map((p: Project) => {
-      const url = p.liveLink && p.liveLink !== "#" ? p.liveLink : p.githubLink;
-      return {
-        "@type": "SoftwareApplication",
-        "@id": `${SITE}/#software-${p.id}`,
-        name: p.title,
-        description: p.description,
-        url,
-        ...(p.githubLink && p.githubLink !== "#"
-          ? { codeRepository: p.githubLink }
-          : {}),
-        applicationCategory: "DeveloperApplication",
-        operatingSystem: inferOperatingSystem(p.technologies),
-        author: { "@id": ID.person },
-        creator: { "@id": ID.person },
-        keywords: p.technologies.join(", "),
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
-        },
-      };
-    });
-}
-
-function inferOperatingSystem(technologies: string[]): string {
-  const tech = technologies.map((t) => t.toLowerCase());
-  if (tech.some((t) => t.includes("macos") || t.includes("swift"))) return "macOS";
-  if (tech.some((t) => t.includes("electron"))) return "macOS, Windows";
-  return "Web";
+/**
+ * The homepage lists projects; it does not describe them. Full
+ * SoftwareSourceCode nodes live on each /projects/<slug> page, so this list
+ * links out to them rather than duplicating their descriptions across two
+ * documents with two competing @ids.
+ */
+function projectListItems() {
+  return projectsData.projects.map((p: Project, i: number) => {
+    const hasPage = p.hasPage && p.overview.length > 0;
+    return {
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.title,
+      description: p.description,
+      ...(hasPage ? { url: `${SITE}/projects/${p.slug}` } : {}),
+    };
+  });
 }
 
 export function buildGraph() {
@@ -167,18 +146,12 @@ export function buildGraph() {
         sameAs: Object.values(meta.socials),
       },
       ...organizationNodes(),
-      ...softwareNodes(),
       {
         "@type": "ItemList",
         "@id": `${SITE}/#projects`,
         name: "Projects by Mikheil Berishvili",
         numberOfItems: projectsData.projects.length,
-        itemListElement: projectsData.projects.map((p: Project, i: number) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          name: p.title,
-          description: p.description,
-        })),
+        itemListElement: projectListItems(),
       },
     ],
   };

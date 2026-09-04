@@ -408,6 +408,14 @@ section { padding: 64px 0; }
   transition: color 0.3s ease;
 }
 
+.pname a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pname a:hover { color: var(--accent); }
+
 .picon {
   flex-shrink: 0;
   color: var(--accent);
@@ -439,6 +447,19 @@ section { padding: 64px 0; }
   font-size: 14px;
   color: var(--text-2);
   line-height: 1.55;
+}
+
+.pdesc a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(59, 91, 140, 0.35);
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.pdesc a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .pstack {
@@ -510,3 +531,123 @@ section { padding: 64px 0; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ─── Project detail & index pages ─── */
+.detail {
+  padding-top: 40px;
+}
+
+.detail section {
+  padding: 40px 0 0;
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-3);
+  margin-bottom: 28px;
+}
+
+.crumbs a {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.crumbs a:hover { color: var(--accent); }
+
+.detail-head {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(30px, 6vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.detail-title .picon { width: 26px; height: 26px; opacity: 0.75; }
+
+.detail-title a { color: inherit; text-decoration: none; }
+
+.detail-tagline {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 520px;
+}
+
+.detail-para {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.detail-para:last-child { margin-bottom: 0; }
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+}
+
+.fact dt {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+
+.fact dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.bullets {
+  /* Deliberately not a flex container: flex layout suppresses ::marker,
+     which silently removes the bullets from a bulleted list. */
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.bullets li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.bullets li + li { margin-top: 9px; }
+
+.bullets li::marker { color: var(--accent); }
+
+.detail-back {
+  margin: 48px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+}
+
+.detail-back a {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-back a:hover { color: var(--accent); }
+
+.plinks a { white-space: nowrap; }

@@ -1,9 +1,10 @@
-import projectsData from "@/data/projects.json";
+import Link from "next/link";
 import companiesData from "@/data/companies.json";
 import meta from "@/data/meta.json";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import ProjectIcon from "@/components/ProjectIcon";
 import ScrollEffects from "@/components/ScrollEffects";
+import { allProjects, projectPath, hasLive, hasSource } from "@/lib/projects";
 
 export default function Home() {
   return (
@@ -65,14 +66,19 @@ export default function Home() {
               <h2 className="section-label reveal" id="about-heading">About</h2>
               <div className="reveal" style={{ marginBottom: "24px" }}>
                 <p className="pdesc" style={{ fontSize: "15px", marginBottom: "12px" }}>
-                  With years of experience in full-stack development, I specialize in building scalable,
-                  high-performance applications that solve real-world problems. My expertise spans from
-                  modern frontend frameworks to robust backend systems.
+                  I&apos;m a full-stack developer working mainly in .NET, C# and React, currently at
+                  TBC Bank on systems where correctness under load actually matters — rate engines,
+                  transaction flows, message-driven services built on RabbitMQ and SignalR.
                 </p>
                 <p className="pdesc" style={{ fontSize: "15px" }}>
-                  I thrive on tackling complex challenges and transforming them into elegant, maintainable
-                  solutions. Whether it&apos;s architecting microservices, optimizing database performance,
-                  or crafting intuitive user interfaces, I bring a meticulous approach to every project.
+                  I care most about the boring parts that decide whether a codebase survives: where the
+                  boundaries sit, what belongs in the domain, when a repository abstraction earns its
+                  keep. That interest shows up in what I open-source —{" "}
+                  <Link href="/projects/dotnet-clean-architecture-template">
+                    Clean Architecture templates
+                  </Link>
+                  , <Link href="/projects/common-repository">EF Core repository libraries</Link>,{" "}
+                  <Link href="/projects/dct-dotnet-cli-tool">CQRS tooling</Link>.
                 </p>
               </div>
               <ul className="pstack reveal">
@@ -112,44 +118,56 @@ export default function Home() {
           <section id="projects" aria-labelledby="projects-heading">
             <div className="site-container">
               <h2 className="section-label reveal" id="projects-heading">Projects</h2>
-              {projectsData.projects.map((project) => (
-                <article key={project.id} className="project reveal">
-                  <div className="project-top">
-                    <h3 className="pname">
-                      <ProjectIcon name={project.icon} />
-                      {project.title}
-                    </h3>
-                    <div className="plinks">
-                      {project.liveLink && project.liveLink !== "#" && (
-                        <a
-                          href={project.liveLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${project.title} — live site`}
-                        >
-                          Live ↗
-                        </a>
-                      )}
-                      {project.githubLink && project.githubLink !== "#" && (
-                        <a
-                          href={project.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${project.title} — source on GitHub`}
-                        >
-                          GitHub ↗
-                        </a>
-                      )}
+              {allProjects.map((project) => {
+                const path = projectPath(project);
+                return (
+                  <article key={project.id} className="project reveal">
+                    <div className="project-top">
+                      <h3 className="pname">
+                        <ProjectIcon name={project.icon} />
+                        {path ? (
+                          <Link href={path}>{project.title}</Link>
+                        ) : (
+                          project.title
+                        )}
+                      </h3>
+                      <div className="plinks">
+                        {path && <Link href={path}>Details →</Link>}
+                        {hasLive(project) && (
+                          <a
+                            href={project.liveLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${project.title} — live site`}
+                          >
+                            Live ↗
+                          </a>
+                        )}
+                        {hasSource(project) && (
+                          <a
+                            href={project.githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${project.title} — source on GitHub`}
+                          >
+                            GitHub ↗
+                          </a>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  <p className="pdesc">{project.description}</p>
-                  <ul className="pstack">
-                    {project.technologies.map((tech) => (
-                      <li key={tech}>{tech}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
+                    <p className="pdesc">{project.description}</p>
+                    <ul className="pstack">
+                      {project.technologies.map((tech) => (
+                        <li key={tech}>{tech}</li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+
+              <p className="detail-back reveal" style={{ marginTop: "32px" }}>
+                <Link href="/projects">All projects →</Link>
+              </p>
             </div>
           </section>
 

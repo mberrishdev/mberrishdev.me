@@ -25,14 +25,20 @@ export function GET() {
 
   const projects = projectsData.projects
     .map((p) => {
+      const hasPage = p.hasPage && p.overview.length > 0;
       const links = [
         p.liveLink && p.liveLink !== "#" ? p.liveLink : null,
         p.githubLink && p.githubLink !== "#" ? p.githubLink : null,
       ].filter(Boolean);
       return [
         `### ${p.title}`,
+        p.tagline || null,
         p.description,
+        p.role === "Contributor"
+          ? "Role: contributor (this project is authored by someone else)"
+          : null,
         `Tech: ${p.technologies.join(", ")}`,
+        hasPage ? `Full write-up: ${siteUrl}/projects/${p.slug}` : null,
         links.length ? `Links: ${links.join(" | ")}` : null,
       ]
         .filter(Boolean)
@@ -68,6 +74,8 @@ ${meta.knowsAbout.join(", ")}
 ${employment}
 
 ## Projects
+
+Index: ${siteUrl}/projects
 
 ${projects}
 

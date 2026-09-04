@@ -1,287 +1,581 @@
 {
+  "_comment": "hasPage:true generates /projects/<slug>. Only set it where `overview` and `highlights` carry enough unique substance to justify an indexable page — thin pages are an SEO liability, not an asset. role:'Contributor' means the repo belongs to someone else; such projects must never claim authorship in structured data.",
   "projects": [
     {
       "id": 25,
+      "slug": "notchly",
+      "hasPage": true,
       "title": "Notchly",
       "icon": "panel",
+      "role": "Author",
+      "created": "2026-08",
+      "language": "Rust",
+      "license": "MIT",
+      "platforms": ["macOS", "Windows"],
+      "tagline": "A notch-shaped panel for your desktop, dockable to any edge.",
       "description": "A notch-shaped panel that docks to any edge of your desktop and fills with widgets — clock, now playing, system stats, quick launcher, clipboard history. Custom widgets are just folders of HTML, CSS and JS.",
-      "technologies": [
-        "Rust",
-        "Tauri",
-        "TypeScript"
+      "overview": [
+        "Notchly borrows the shape of the MacBook notch and turns it into something useful: a panel that sits on the edge of your screen and opens on hover. Closed, it is a small handle — or nothing at all but a bare line, if you would rather it disappeared entirely. Hover it and it slides open into a strip, one row per widget, each showing its own live reading.",
+        "Rest on a row and that widget expands beside it in full. The panel docks to the top, bottom, left or right edge, and you decide what the closed handle shows when it is idle.",
+        "The part I care about most is the extension model. A widget is not a plugin API to learn — it is a folder of HTML, CSS and JavaScript. If you can build a web page, you can build a Notchly widget, which keeps the barrier to writing your own close to zero."
       ],
+      "highlights": [
+        "Docks to any screen edge; hover to expand from handle to full strip",
+        "Built-in widgets for clock, now playing, system stats, quick launcher and clipboard history",
+        "Custom widgets are plain folders of HTML, CSS and JS — no plugin API to learn",
+        "Configurable idle handle, so it can be as loud or as invisible as you want",
+        "No Dock or taskbar icon; it lives entirely on the screen edge",
+        "Built on Tauri, so the shell is Rust and the widgets are web technology"
+      ],
+      "technologies": ["Rust", "Tauri", "TypeScript"],
       "githubLink": "https://github.com/mberrishdev/Notchly",
       "liveLink": "#"
     },
     {
       "id": 24,
+      "slug": "patchly",
+      "hasPage": true,
       "title": "Patchly",
       "icon": "refresh",
+      "role": "Author",
+      "created": "2026-08",
+      "language": "Swift",
+      "license": "MIT",
+      "platforms": ["macOS"],
+      "tagline": "Know what's out of date on your Mac, from the menu bar.",
       "description": "A macOS menu bar app that scans every app you have installed and checks each one against the Mac App Store, Homebrew, or its own Sparkle feed — then tells you which ones actually have an update waiting. It never installs anything behind your back.",
-      "technologies": [
-        "Swift 6",
-        "macOS",
-        "Sparkle",
-        "Homebrew"
+      "overview": [
+        "macOS has no single answer to the question \"what on this machine needs updating?\". App Store apps report to the App Store, Homebrew casks report to Homebrew, and everything else ships its own Sparkle feed. Patchly asks all three.",
+        "It scans /Applications, /Applications/Utilities and ~/Applications, works out which update mechanism each app actually uses, and checks that source. Apps with an update waiting sort to the top of the list, with a badge count on the menu bar icon so you often do not need to open it at all.",
+        "It deliberately stops short of installing anything. Patchly reports status and lets you decide — the update path for a Homebrew cask and an App Store app are not the same, and silently picking one on your behalf is how things break."
       ],
+      "highlights": [
+        "Aggregates three update sources: Mac App Store, Homebrew Cask, and Sparkle feeds",
+        "Scans /Applications, /Applications/Utilities and ~/Applications",
+        "Badge count on the menu bar icon — no need to open the panel",
+        "Refreshes on a timer and whenever the Mac wakes from sleep",
+        "Reports status only; never installs updates behind your back",
+        "Installable via Homebrew tap, or buildable from source"
+      ],
+      "technologies": ["Swift 6", "macOS", "Sparkle", "Homebrew"],
       "githubLink": "https://github.com/mberrishdev/Patchly",
       "liveLink": "#"
     },
     {
       "id": 23,
+      "slug": "readly",
+      "hasPage": true,
       "title": "Readly",
       "icon": "scan",
+      "role": "Author",
+      "created": "2026-08",
+      "language": "Swift",
+      "license": "MIT",
+      "platforms": ["macOS"],
+      "tagline": "Press a hotkey, drag a region, get the text — fully on-device.",
       "description": "Press a hotkey, drag a rectangle over anything on screen, and the text inside is recognised and copied to your clipboard. Runs entirely on-device through Apple's Vision framework — nothing is uploaded and nothing is kept.",
-      "technologies": [
-        "Swift 6",
-        "Vision",
-        "ScreenCaptureKit",
-        "macOS"
+      "overview": [
+        "Readly is a native macOS menu bar utility for the specific problem of text you can see but cannot select: a screenshot, a video frame, a modal dialog, a scanned PDF, a UI label.",
+        "Press the hotkey, the screen dims and the cursor becomes a crosshair, drag a rectangle, and the text inside it lands on your clipboard. A brief HUD confirms it. There are no windows to manage and no files left behind.",
+        "Capture goes through ScreenCaptureKit and recognition through Apple's Vision framework, both on-device. Readly makes no network requests and keeps no history, which means the text it reads never leaves the machine — the property that matters most when the thing on screen is a password reset code or a client document."
       ],
+      "highlights": [
+        "Global rebindable hotkey (⇧⌘2 by default), drag-to-select any screen region",
+        "OCR runs on-device via Apple's Vision framework",
+        "Screen capture via ScreenCaptureKit",
+        "Zero network requests and no stored history",
+        "Works on non-selectable text: images, video frames, dialogs, scanned PDFs",
+        "Requires macOS 14+ on Apple Silicon with Screen Recording permission"
+      ],
+      "technologies": ["Swift 6", "Vision", "ScreenCaptureKit", "macOS"],
       "githubLink": "https://github.com/mberrishdev/Readly",
       "liveLink": "#"
     },
     {
       "id": 22,
+      "slug": "qr-generator",
+      "hasPage": false,
       "title": "QR Generator",
       "icon": "qr",
+      "role": "Author",
+      "created": "2026-08",
+      "language": "TypeScript",
+      "license": "",
+      "platforms": ["Web"],
+      "tagline": "Turn any link or text into a downloadable QR code.",
       "description": "A small, fast web tool that turns any link or block of text into a QR code you can download. No account, no tracking, no upsell.",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS"
-      ],
+      "overview": [],
+      "highlights": [],
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubLink": "https://github.com/mberrishdev/qr-generator",
       "liveLink": "https://qr.mberrishdev.me"
     },
     {
       "id": 21,
+      "slug": "versume",
+      "hasPage": true,
       "title": "Versume",
       "icon": "document",
+      "role": "Author",
+      "created": "2026-06",
+      "language": "TypeScript",
+      "license": "MIT",
+      "platforms": ["Web"],
+      "tagline": "Version your resume like code — every save is a git commit.",
       "description": "CV editor backed by GitHub — every save is a git commit. Build multiple CV variants, restore any version, live preview, and export to PDF. Built with Next.js, GitHub OAuth, and Octokit.",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "GitHub API",
-        "NextAuth"
+      "overview": [
+        "A CV is a document people rewrite constantly and version badly — cv_final_v3_actually_final.docx is a genre. Versume treats it the way you would treat code: as structured data in a git repository, where every save is a commit and nothing is ever really lost.",
+        "You sign in with GitHub and Versume creates a private cv-store repository in your own account. Your CV lives there as JSON — one file per variant, so a backend-flavoured CV and a full-stack one are separate files rather than separate documents you forget to keep in sync.",
+        "Because the storage is just git, version history comes free. Every save is a commit you can inspect and restore. The data is in your GitHub account, not in someone else's database, which means the tool going away does not take your CV with it."
       ],
+      "highlights": [
+        "GitHub OAuth sign-in; data stored in a private cv-store repo you own",
+        "Every save is a real git commit — restore any previous version",
+        "Multiple CV variants as separate JSON files (e.g. backend, fullstack)",
+        "Structured editor for Personal, Experience, Projects, Education, Skills, Languages",
+        "Live preview that renders as you type, and PDF export",
+        "Unsaved drafts survive a page refresh via localStorage"
+      ],
+      "technologies": ["Next.js", "TypeScript", "GitHub API", "NextAuth"],
       "githubLink": "https://github.com/mberrishdev/versume",
       "liveLink": "https://versume.mberrishdev.me"
     },
     {
       "id": 20,
+      "slug": "camus",
+      "hasPage": true,
       "title": "Camus",
       "icon": "sparkle",
+      "role": "Author",
+      "created": "2026-07",
+      "language": "Swift",
+      "license": "",
+      "platforms": ["macOS"],
+      "tagline": "Rewrite text anywhere on your Mac, without leaving the app you're in.",
       "description": "AI-powered text rewriter for macOS. Select any text anywhere on your Mac and instantly rewrite it with AI — without switching apps or copying to a browser.",
-      "technologies": [
-        "macOS",
-        "Swift",
-        "AI"
+      "overview": [
+        "Using an AI model to rewrite a paragraph normally costs you the context switch: copy the text, find the browser tab, paste, prompt, copy the result, come back. Camus removes the round trip. Select text in whatever app you are already in, press a shortcut, pick a style, and the text is replaced in place.",
+        "It works system-wide — Gmail, Slack, Notion, Discord, LinkedIn, X, iMessage and others — because it operates on the selection rather than integrating with each app. Six presets ship with their own shortcuts (Improve, Shorten, Summarize, Reply, Friendly, For LinkedIn), and you can define your own with custom prompts, icons and keys.",
+        "Rewrites can run against a local model (Gemma 3n) entirely on-device, which means drafts never leave the machine, or against the cloud when you want more capability. History keeps the original draft alongside each rewrite, filterable by app or preset, so an over-eager edit is always recoverable."
       ],
+      "highlights": [
+        "System-wide: works in Gmail, Slack, Notion, Discord, LinkedIn, X, iMessage and more",
+        "Six preset rewrites, each with its own shortcut",
+        "Custom actions with your own prompts, icons, colours and keybindings",
+        "On-device processing via a local Gemma 3n model, or cloud when preferred",
+        "Full rewrite history with the original draft preserved",
+        "Requires macOS 26+"
+      ],
+      "technologies": ["macOS", "Swift", "AI"],
       "githubLink": "#",
       "liveLink": "https://getcamus.app"
     },
     {
       "id": 19,
+      "slug": "wormhole",
+      "hasPage": true,
       "title": "Wormhole",
       "icon": "tunnel",
+      "role": "Author",
+      "created": "2026-05",
+      "language": "Go",
+      "license": "",
+      "platforms": ["Linux", "macOS"],
+      "tagline": "A self-hosted ngrok: expose a local port through your own SSH relay.",
       "description": "Lightweight self-hosted tunnel that exposes a local port to the public internet via an SSH relay server — no third-party services required, similar to ngrok but fully under your control.",
-      "technologies": [
-        "Go",
-        "SSH"
+      "overview": [
+        "Tunnelling a local port to the public internet usually means handing your traffic to a third-party service. Wormhole does the same job over a relay you own: a small Go server on any public VPS, and a client on your machine.",
+        "The client opens an SSH connection to the server and requests a tunnel. The server assigns a readable token — calm-fox-535990 — and forwards traffic from that subdomain through the SSH connection to your local service. Each tunnel is isolated and ephemeral.",
+        "The trade-off against a hosted service is deliberate: you need a public machine and wildcard DNS, and in exchange no one else terminates your traffic or decides your rate limits. A local dashboard on port 4040 shows what is flowing through."
       ],
+      "highlights": [
+        "Self-hosted relay — traffic passes through infrastructure you control",
+        "SSH-based tunnelling with a persistent Ed25519 host key",
+        "Readable auto-generated tunnel tokens (e.g. calm-fox-535990)",
+        "Isolated, ephemeral tunnels per connection",
+        "Local inspection dashboard on port 4040",
+        "Single-command install script; Go 1.21+ and wildcard DNS required"
+      ],
+      "technologies": ["Go", "SSH"],
       "githubLink": "https://github.com/mberrishdev/wormhole",
       "liveLink": "#"
     },
     {
       "id": 18,
+      "slug": "xarji",
+      "hasPage": true,
       "title": "Xarji",
       "icon": "chart",
+      "role": "Contributor",
+      "created": "2026-01",
+      "language": "TypeScript",
+      "license": "MIT",
+      "platforms": ["macOS"],
+      "tagline": "Self-hosted finance tracking for Georgian banks, built on SMS parsing.",
       "description": "Self-hosted finance manager for Georgian banks. Reads bank SMS notifications from your Mac's Messages app, parses transaction details, and syncs them to your own InstantDB instance — giving you a real-time dashboard with analytics and category breakdowns. Your data never touches third-party servers.",
-      "technologies": [
-        "macOS",
-        "InstantDB",
-        "TypeScript"
+      "overview": [
+        "Georgian banks do not publish public APIs for transaction data. There are no exports and no integrations — you see whatever the bank's own app decides to show you. But the banks do send an SMS for every transaction, and that turns out to be enough.",
+        "Xarji reads those SMS notifications from the Messages app on macOS, parses the transaction details out of them, and syncs the result into an InstantDB instance on your own account. What comes out is a real-time dashboard with analytics and category breakdowns over data the bank never intended to give you.",
+        "The pipeline is deliberately local: Messages.app to the parsing service to your own InstantDB to the dashboard. Nothing passes through a third party. It supports Bank of Georgia/Solo, TBC, Liberty, Credo, Basis and Tera, plus custom sender IDs.",
+        "This is Tornike Gomareli's project; I contributed to it rather than authoring it."
       ],
+      "highlights": [
+        "Works around the absence of public banking APIs in Georgia by parsing SMS",
+        "Supports Bank of Georgia/Solo, TBC, Liberty, Credo, Basis, Tera and custom senders",
+        "Data flows Messages.app → parser → your own InstantDB → dashboard",
+        "No third-party servers involved at any point",
+        "Real-time analytics and category breakdowns",
+        "Requires macOS, the Bun runtime, and a free InstantDB account"
+      ],
+      "technologies": ["macOS", "InstantDB", "TypeScript"],
       "githubLink": "https://github.com/tornikegomareli/Xarji",
       "liveLink": "https://xarji.app/"
     },
     {
       "id": 17,
+      "slug": "clipai",
+      "hasPage": true,
       "title": "clipai",
       "icon": "clipboard",
+      "role": "Author",
+      "created": "2025-12",
+      "language": "TypeScript",
+      "license": "MIT",
+      "platforms": ["macOS", "Windows"],
+      "tagline": "Clipboard history with semantic search, in the menu bar.",
       "description": "A modern macOS/Windows clipboard history manager built with Electron. Runs as a menu bar app that monitors clipboard changes in real-time with a React-based UI. Features semantic search powered by OpenAI LLM to intelligently search through clipboard history.",
-      "technologies": [
-        "Electron",
-        "React",
-        "TypeScript",
-        "Vite",
-        "Bun"
+      "overview": [
+        "Clipboard managers are easy to build and hard to search. Once you have a few hundred entries, exact-match search stops helping — you remember what the thing was about, not the words it contained.",
+        "clipai adds semantic search over clipboard history, so \"that database connection string\" finds the right entry without you recalling its literal text. It runs in the menu bar on macOS and the system tray on Windows, capturing both text and images as you copy.",
+        "It recognises what it has captured — JSON, URLs, colours, emails, base64 — and formats accordingly, with syntax highlighting for JSON. History lives in memory and clears on restart, which is the right default for something that sees every password you copy."
       ],
+      "highlights": [
+        "Semantic search over clipboard history via an LLM",
+        "Captures both text and images, including screenshots",
+        "Smart content detection: JSON, URLs, colours, emails, base64",
+        "Syntax-highlighted JSON formatting",
+        "Frosted-glass transparent UI, toggleable",
+        "In-memory history that clears on restart by design"
+      ],
+      "technologies": ["Electron", "React", "TypeScript", "Vite", "Bun"],
       "githubLink": "https://github.com/mberrishdev/clipai",
       "liveLink": "#"
     },
     {
       "id": 16,
+      "slug": "dct-dotnet-cli-tool",
+      "hasPage": true,
       "title": "dct (Dotnet CLI Tool)",
       "icon": "terminal",
+      "role": "Author",
+      "created": "2025-07",
+      "language": "C#",
+      "license": "MIT",
+      "platforms": ["Cross-platform"],
+      "tagline": "Scaffold CQRS and Clean Architecture components from the command line.",
       "description": "A .NET global CLI tool that accelerates CQRS and Clean Architecture development. Rapidly generates commands, queries, handlers, and interfaces with customizable templates, enforcing best practices and boosting developer productivity.",
-      "technologies": [
-        ".NET",
-        "Spectre.Console.Cli",
-        "Scriban"
+      "overview": [
+        "CQRS in a Clean Architecture codebase means a lot of small, structurally identical files. Every feature is a command or query, a handler, usually a validator, and the interfaces that bind them. Writing them by hand is repetitive, and repetitive work is where conventions quietly drift apart.",
+        "dct is a .NET global tool that generates those artifacts from templates. You run dct init once, which drops a .dct folder into the project root containing the templates and configuration; from then on dct create command User/CreateUser produces a file that matches how your team writes them.",
+        "The templates are the point. Because generation is driven by files in your repository rather than by conventions baked into the tool, dct adapts to a codebase instead of imposing a structure on it — and the conventions get enforced by default rather than by review."
       ],
+      "highlights": [
+        "Generates CQRS artifacts: commands, queries, handlers, classes and interfaces",
+        "Templates and config live in a .dct folder inside your own repository",
+        "Fully customisable output — the tool adapts to your codebase, not the reverse",
+        "Installed globally via dotnet tool install -g dct",
+        "Built on Spectre.Console.Cli with Scriban templating",
+        "Published on NuGet"
+      ],
+      "technologies": [".NET", "Spectre.Console.Cli", "Scriban"],
       "githubLink": "https://github.com/mberrishdev/dct",
       "liveLink": "https://www.nuget.org/packages/dct"
     },
     {
       "id": 15,
+      "slug": "fruit-ninja-multiplayer",
+      "hasPage": true,
       "title": "Fruit Ninja - Multiplayer Game",
       "icon": "gamepad",
+      "role": "Author",
+      "created": "2025-08",
+      "language": "JavaScript",
+      "license": "",
+      "platforms": ["Web"],
+      "tagline": "Real-time multiplayer fruit slicing over WebSockets.",
       "description": "Real-time multiplayer fruit slicing game with room-based gameplay. Built with NestJS and Pixi.js, featuring a 100x100 grid system, live leaderboards, and WebSocket synchronization. Optimized for performance with mobile touch controls and responsive design.",
-      "technologies": [
-        "NestJS",
-        "Pixi.js",
-        "Socket.io",
-        "JavaScript",
-        "HTML",
-        "CSS"
+      "overview": [
+        "A browser game built to work through the real problem in multiplayer: keeping several clients agreed on the same fast-moving state without the game feeling laggy or unfair.",
+        "The server runs on NestJS and owns the simulation — a 100×100 matrix updated at 60 FPS, with gravity applied to every fruit in play. Clients render through Pixi.js and send slice gestures back over Socket.io. Rooms are created with six-character codes, the creator controls start and restart, and matches run two minutes with a live leaderboard.",
+        "Most of the work went into the parts that make it feel good rather than merely function: slice trails that follow the cursor, particle bursts on a hit, scoring weighted by fruit rarity, and touch controls that behave properly on a phone."
       ],
+      "highlights": [
+        "Room system with six-character join codes and owner controls",
+        "Authoritative NestJS server simulating a 100×100 grid at 60 FPS",
+        "Pixi.js rendering with slice trails and particle effects",
+        "Socket.io state synchronisation across all players in a room",
+        "Live animated leaderboard and timed two-minute matches",
+        "Rarity-weighted scoring, mobile touch controls, responsive layout"
+      ],
+      "technologies": ["NestJS", "Pixi.js", "Socket.io", "JavaScript", "HTML", "CSS"],
       "githubLink": "https://github.com/mberrishdev/fruit-ninja",
       "liveLink": "https://fruitninja.mberrishdev.me"
     },
     {
       "id": 1,
+      "slug": "spendwise",
+      "hasPage": true,
       "title": "SpendWise",
       "icon": "wallet",
+      "role": "Author",
+      "created": "2025-06",
+      "language": "TypeScript",
+      "license": "MIT",
+      "platforms": ["Web"],
+      "tagline": "Privacy-first personal expense tracking on Firebase.",
       "description": "Personal finance management application for tracking expenses and budgets. Features secure Firebase authentication, real-time data synchronization, and intuitive expense categorization built with React and TypeScript.",
-      "technologies": [
-        "React",
-        "TypeScript",
-        "Firebase"
+      "overview": [
+        "A personal finance tracker built around the constraint that spending data is among the most sensitive information a person keeps. Every record is scoped to the signed-in user's Firestore UID, with security rules restricting access to authenticated users only.",
+        "Sign-in is Google via Firebase Auth. Expenses, categories and the monthly plan all live in Firestore, so changes sync in real time across devices without any synchronisation code of its own.",
+        "The interface is deliberately small: categorise an expense, see where the month is going, adjust the plan. It is built with React, Vite and Tailwind, and pairs with a separate server API and a Chrome extension for TBC Bank integration."
       ],
+      "highlights": [
+        "Google Sign-In through Firebase Authentication",
+        "Per-user data isolation — every record scoped to the owner's Firestore UID",
+        "Real-time sync across devices via Firestore",
+        "Expense categorisation and monthly budget planning",
+        "React + Vite + Tailwind CSS front end",
+        "Companion server API and a TBC Bank Chrome extension"
+      ],
+      "technologies": ["React", "TypeScript", "Firebase"],
       "githubLink": "https://github.com/mberrishdev/spend-wise",
       "liveLink": "https://spendwise.mberrishdev.me/"
     },
     {
       "id": 14,
+      "slug": "repopulse",
+      "hasPage": true,
       "title": "RepoPulse",
       "icon": "pulse",
+      "role": "Author",
+      "created": "2025-07",
+      "language": "TypeScript",
+      "license": "",
+      "platforms": ["Web"],
+      "tagline": "One dashboard for CI/CD and Renovate PRs across many Azure DevOps repos.",
       "description": "Unified dashboard for monitoring and managing CI/CD pipelines across multiple Azure DevOps repositories. Enables DevOps teams to track repository health, automate dependency updates with Renovate, and trigger builds from a single interface.",
-      "technologies": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "Azure DevOps"
+      "overview": [
+        "Azure DevOps is workable for one repository and tiring across twenty. Checking pipeline health means opening twenty tabs, and Renovate's dependency PRs pile up across all of them at once.",
+        "RepoPulse puts every configured repository on a single dashboard with its current pipeline status, and lets you trigger CI for one repo or all of them at once. Renovate pull requests are listed across all repositories together, with draft PRs publishable in one click and a build triggerable straight from the PR card.",
+        "Configuration lives in the browser's localStorage rather than on a server — you import or author a config.json and it never leaves your machine unless you choose to download or share it. For a tool holding Azure DevOps access, keeping the deployment stateless was worth the small amount of setup friction."
       ],
+      "highlights": [
+        "Unified status view across every configured Azure DevOps repository",
+        "Trigger CI pipelines individually or across all repos at once",
+        "Cross-repository Renovate PR management with one-click publish of drafts",
+        "Trigger a build directly from any PR card",
+        "Visual status badges for build and PR states",
+        "Config stored in browser localStorage — nothing held server-side"
+      ],
+      "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Azure DevOps"],
       "githubLink": "https://github.com/mberrishdev/repo-pulse",
       "liveLink": "https://repopulse.mberrishdev.me/"
     },
     {
       "id": 6,
+      "slug": "hubdocs",
+      "hasPage": true,
       "title": "HubDocs",
       "icon": "book",
+      "role": "Author",
+      "created": "2025-06",
+      "language": "C#",
+      "license": "MIT",
+      "platforms": ["Cross-platform"],
+      "tagline": "Swagger for SignalR hubs in ASP.NET Core.",
       "description": "API documentation tool for SignalR hubs in ASP.NET Core applications. Provides a Swagger-like UI that automatically discovers and documents all SignalR hubs and their methods, simplifying real-time API exploration.",
-      "technologies": [
-        ".NET 8",
-        "SignalR"
+      "overview": [
+        "REST endpoints in ASP.NET Core get Swagger: a generated, browsable, invokable description of the API. SignalR hubs get nothing. Their methods are as much a public contract as any controller action, but the only way to learn one is to read the hub class.",
+        "HubDocs closes that gap. It discovers every SignalR hub in the application automatically and renders them in a Swagger-inspired UI, showing method signatures, parameters and return types — and letting you invoke methods directly from the browser.",
+        "The piece that turned out to matter most is live client logging: because SignalR is bidirectional, seeing what the server pushes to clients through strongly-typed interfaces is often the thing you actually need while debugging. It installs as a NuGet package with a few lines of setup."
       ],
+      "highlights": [
+        "Automatic discovery of every SignalR hub in an ASP.NET Core app",
+        "Documents method signatures, parameters and return types",
+        "Invoke hub methods directly from the browser",
+        "Live logging of server-to-client messages sent via typed interfaces",
+        "Swagger-inspired dark-theme UI",
+        "Ships as a NuGet package; setup is a few lines"
+      ],
+      "technologies": [".NET 8", "SignalR"],
       "githubLink": "https://github.com/mberrishdev/HubDocs",
       "liveLink": "https://hubdocs.mberrishdev.me/"
     },
     {
-      "id": 7,
-      "title": "TBC Bank - Exchange Rate Portal",
-      "icon": "exchange",
-      "description": "Enterprise portal enabling customers to request personalized exchange rates across web, mobile, and branch channels. Features automated validation workflows, manual approval processes, and real-time rate synchronization.",
-      "technologies": [
-        ".NET 8",
-        "SQL Server",
-        "RabbitMQ"
-      ],
-      "githubLink": "#",
-      "liveLink": "#"
-    },
-    {
-      "id": 8,
-      "title": "TBC Bank - Rate Engine",
-      "icon": "gauge",
-      "description": "High-performance rate engine managing exchange, commercial, and individual rates. Optimized to reliably process high-volume financial transactions with Redis caching and real-time SignalR updates.",
-      "technologies": [
-        "SignalR",
-        "Redis",
-        "RabbitMQ",
-        "SQL Server",
-        ".NET"
-      ],
-      "githubLink": "#",
-      "liveLink": "#"
-    },
-    {
-      "id": 9,
-      "title": "TBC Bank - Jira Automation Tool",
-      "icon": "check",
-      "description": "Automated task management system that creates and tracks Jira tickets across departments. Integrates with internal systems via RabbitMQ to streamline project management workflows.",
-      "technologies": [
-        ".NET",
-        "Jira API",
-        "RabbitMQ"
-      ],
-      "githubLink": "#",
-      "liveLink": "#"
-    },
-    {
-      "id": 10,
-      "title": "TBC Bank - Internal Libraries",
-      "icon": "package",
-      "description": "Developed reusable internal libraries including RabbitMQ idempotency checker and common templates. Improved code standardization and development efficiency across multiple enterprise projects.",
-      "technologies": [
-        ".NET",
-        "C#",
-        "RabbitMQ"
-      ],
-      "githubLink": "#",
-      "liveLink": "#"
-    },
-    {
       "id": 11,
+      "slug": "dotnet-clean-architecture-template",
+      "hasPage": true,
       "title": ".NET Clean Architecture Template",
       "icon": "layers",
+      "role": "Author",
+      "created": "2024-06",
+      "language": "C#",
+      "license": "",
+      "platforms": ["Cross-platform"],
+      "tagline": "A dotnet new template with the Clean Architecture layers already wired.",
       "description": "Production-ready Clean Architecture solution template for .NET projects. Includes API, Application, Domain, Infrastructure, and Persistence layers with best practices baked in, accelerating scalable application development.",
-      "technologies": [
-        ".NET",
-        "C#"
+      "overview": [
+        "Starting a Clean Architecture solution means recreating the same five projects, the same reference rules between them, and the same dependency-injection wiring every time — before writing a line of behaviour.",
+        "This is that setup as a dotnet new template. Install it once with dotnet new install, then dotnet new mbtemplate -n YourProject produces a solution with API, Application, Domain, Infrastructure and Persistence layers already in place and correctly referenced.",
+        "It is intentionally a template rather than a framework or a NuGet dependency: the generated code is yours to change. Nothing is hidden behind a package you would have to fight when your architecture stops matching the default."
       ],
+      "highlights": [
+        "Five wired layers: API, Application, Domain, Infrastructure, Persistence",
+        "Installs into the .NET CLI as a first-class dotnet new template",
+        "Correct project references and DI wiring from the first build",
+        "Generated code is fully owned by you — no framework dependency",
+        "Scaffolds a runnable Web API solution in one command"
+      ],
+      "technologies": [".NET", "C#"],
       "githubLink": "https://github.com/mberrishdev/Net.Template",
       "liveLink": "https://github.com/mberrishdev/Net.Template"
     },
     {
       "id": 12,
+      "slug": "notifyhub",
+      "hasPage": true,
       "title": "NotifyHub",
       "icon": "bell",
+      "role": "Author",
+      "created": "2025-06",
+      "language": "C#",
+      "license": "",
+      "platforms": ["Cross-platform"],
+      "tagline": "Group-targeted real-time notifications on ASP.NET Core and SignalR.",
       "description": "Scalable real-time notification system built with ASP.NET Core and SignalR. Enables efficient group-based notifications with support for targeted messaging to specific user groups and roles.",
-      "technologies": [
-        ".NET",
-        "C#",
-        "SignalR"
+      "overview": [
+        "Most real-time notification requirements are not \"broadcast to everyone\" — they are \"tell these users, in this role, that this happened\". Getting that right on top of raw SignalR means building group management, targeting and history yourself every time.",
+        "NotifyHub is that layer. Built on ASP.NET Core and SignalR, it delivers notifications to specific user groups and roles rather than to every connected client, with role-based access controlling who may receive what.",
+        "It also keeps event history, so a notification is retrievable after the fact rather than lost the moment a client happens to be disconnected — the detail that separates a demo from something usable in production."
       ],
+      "highlights": [
+        "Group-based targeting rather than indiscriminate broadcast",
+        "Role-based access control over notification delivery",
+        "Retrievable event history, so messages survive disconnection",
+        "Built on ASP.NET Core with SignalR for instant delivery",
+        "Simple API for sending and subscribing",
+        "Ships with a test client for local verification"
+      ],
+      "technologies": [".NET", "C#", "SignalR"],
       "githubLink": "https://github.com/mberrishdev/NotifyHub",
       "liveLink": "https://github.com/mberrishdev/NotifyHub"
     },
     {
       "id": 13,
+      "slug": "common-repository",
+      "hasPage": true,
       "title": "Common.Repository",
       "icon": "database",
+      "role": "Author",
+      "created": "2022-11",
+      "language": "C#",
+      "license": "MIT",
+      "platforms": ["Cross-platform"],
+      "tagline": "Repository and unit-of-work patterns for EF Core, as a NuGet package.",
       "description": "Reusable repository and unit of work pattern implementation for .NET projects. Simplifies data access layer development with Entity Framework Core and promotes consistent database operations.",
-      "technologies": [
-        ".NET",
-        "C#",
-        "EF Core",
-        "SQL Server"
+      "overview": [
+        "Nearly every EF Core codebase grows its own repository abstraction, and nearly every one re-solves the same problems slightly differently: where transactions begin, when SaveChanges is called, how paging and sorting are expressed.",
+        "Common.Repository is that layer extracted and published, so it is written once. It provides generic IRepository<T> and IQueryRepository<T> interfaces with EF Core implementations, separating read paths from write paths so queries can be optimised as read-only.",
+        "Unit of work handles transaction scope, with configurable save strategies — commit per operation or per unit of work, depending on whether the calling code wants granularity or atomicity. Paging and sorting are first-class through PagedList<T> and SortingDetails<T> rather than being reinvented per project.",
+        "This is the oldest project here, started in 2022, and it is on NuGet as BerrishDev.Common.Repository."
       ],
+      "highlights": [
+        "Generic IRepository<T> and IQueryRepository<T> with EF Core implementations",
+        "Read/write separation so query paths can be optimised independently",
+        "Unit of work with configurable PerOperation or PerUnitOfWork save strategies",
+        "First-class pagination via PagedList<T> and PagingDetails",
+        "Flexible sorting through SortingDetails<T> and SortItem",
+        "Fully async, integrates with the .NET DI container; EF Core 6.0+"
+      ],
+      "technologies": [".NET", "C#", "EF Core", "SQL Server"],
       "githubLink": "https://github.com/mberrishdev/Common.Repository",
       "liveLink": "https://github.com/mberrishdev/Common.Repository"
+    },
+    {
+      "id": 7,
+      "slug": "tbc-exchange-rate-portal",
+      "hasPage": false,
+      "title": "TBC Bank - Exchange Rate Portal",
+      "icon": "exchange",
+      "role": "Author",
+      "created": "",
+      "language": "C#",
+      "license": "",
+      "platforms": [],
+      "tagline": "",
+      "description": "Enterprise portal enabling customers to request personalized exchange rates across web, mobile, and branch channels. Features automated validation workflows, manual approval processes, and real-time rate synchronization.",
+      "overview": [],
+      "highlights": [],
+      "technologies": [".NET 8", "SQL Server", "RabbitMQ"],
+      "githubLink": "#",
+      "liveLink": "#"
+    },
+    {
+      "id": 8,
+      "slug": "tbc-rate-engine",
+      "hasPage": false,
+      "title": "TBC Bank - Rate Engine",
+      "icon": "gauge",
+      "role": "Author",
+      "created": "",
+      "language": "C#",
+      "license": "",
+      "platforms": [],
+      "tagline": "",
+      "description": "High-performance rate engine managing exchange, commercial, and individual rates. Optimized to reliably process high-volume financial transactions with Redis caching and real-time SignalR updates.",
+      "overview": [],
+      "highlights": [],
+      "technologies": ["SignalR", "Redis", "RabbitMQ", "SQL Server", ".NET"],
+      "githubLink": "#",
+      "liveLink": "#"
+    },
+    {
+      "id": 9,
+      "slug": "tbc-jira-automation",
+      "hasPage": false,
+      "title": "TBC Bank - Jira Automation Tool",
+      "icon": "check",
+      "role": "Author",
+      "created": "",
+      "language": "C#",
+      "license": "",
+      "platforms": [],
+      "tagline": "",
+      "description": "Automated task management system that creates and tracks Jira tickets across departments. Integrates with internal systems via RabbitMQ to streamline project management workflows.",
+      "overview": [],
+      "highlights": [],
+      "technologies": [".NET", "Jira API", "RabbitMQ"],
+      "githubLink": "#",
+      "liveLink": "#"
+    },
+    {
+      "id": 10,
+      "slug": "tbc-internal-libraries",
+      "hasPage": false,
+      "title": "TBC Bank - Internal Libraries",
+      "icon": "package",
+      "role": "Author",
+      "created": "",
+      "language": "C#",
+      "license": "",
+      "platforms": [],
+      "tagline": "",
+      "description": "Developed reusable internal libraries including RabbitMQ idempotency checker and common templates. Improved code standardization and development efficiency across multiple enterprise projects.",
+      "overview": [],
+      "highlights": [],
+      "technologies": [".NET", "C#", "RabbitMQ"],
+      "githubLink": "#",
+      "liveLink": "#"
     }
   ]
 }
