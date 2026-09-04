@@ -4,39 +4,36 @@ import "./globals.css";
 import meta from "@/data/meta.json";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { buildGraph } from "@/lib/structured-data";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(meta.siteUrl),
-  title: meta.title,
+  title: {
+    default: meta.title,
+    template: meta.titleTemplate,
+  },
   description: meta.description,
-  applicationName: "Mikheil Berishvili Portfolio",
-  generator: "Next.js 15",
+  applicationName: meta.name,
   referrer: "origin-when-cross-origin",
-  keywords: [
-    "Mikheil Berishvili",
-    "mberrish",
-    "development",
-    "georgia",
-    "full-stack developer",
-    "Portfolio",
-    "Software Engineer",
-    "Full-Stack Developer",
-    "Georgia",
-  ],
-  authors: [{ name: "Mikheil Berishvili", url: meta.siteUrl }],
-  creator: "Mikheil Berishvili",
-  publisher: "Mikheil Berishvili",
+  authors: [{ name: meta.name, url: meta.siteUrl }],
+  creator: meta.name,
+  publisher: meta.name,
   formatDetection: { email: true, address: false, telephone: true },
   category: "technology",
-  alternates: { canonical: meta.siteUrl, languages: { "en-US": meta.siteUrl } },
-  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
-  manifest: "/manifest.json",
+  alternates: { canonical: "/" },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -47,70 +44,49 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    // Images come from the opengraph-image.tsx file convention.
     title: meta.title,
     description: meta.description,
-    url: meta.siteUrl,
-    siteName: meta.title,
-    images: [
-      {
-        url: meta.ogImage.startsWith("http") ? meta.ogImage : meta.siteUrl + meta.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Mikheil Berishvili - Full-Stack Developer Portfolio",
-        type: "image/webp",
-      },
-    ],
+    url: "/",
+    siteName: meta.name,
     locale: "en_US",
     type: "profile",
-    firstName: "Mikheil",
-    lastName: "Berishvili",
-    username: "mberrishdev",
-    gender: "male",
+    firstName: meta.givenName,
+    lastName: meta.familyName,
+    username: meta.alternateName,
   },
   twitter: {
     card: "summary_large_image",
     title: meta.title,
     description: meta.description,
-    creator: "@mberrishdev",
-    site: "@mberrishdev",
-    images: {
-      url: meta.ogImage.startsWith("http") ? meta.ogImage : meta.siteUrl + meta.ogImage,
-      alt: "Mikheil Berishvili - Full-Stack Developer Portfolio",
-    },
+    creator: meta.xHandle,
+    site: meta.xHandle,
   },
-  verification: { other: { me: ["mikheil.berishvili@outlook.com"] } },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Mikheil Berishvili",
-    alternateName: "mberrish",
-    url: meta.siteUrl,
-    image: meta.siteUrl + meta.ogImage,
-    jobTitle: "Full-Stack Developer",
-    description: meta.description,
-    sameAs: [
-      "https://github.com/mberrishdev",
-      "https://linkedin.com/in/mberrish",
-    ],
-    address: { "@type": "PostalAddress", addressCountry: "GE", addressLocality: "Georgia" },
-    email: "mikheil.berishvili@outlook.com",
-    telephone: "+995591300569",
-    knowsAbout: [
-      ".NET", "C#", "React", "TypeScript", "JavaScript", "Node.js", "Next.js",
-      "SQL Server", "PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "SignalR",
-      "Microservices", "Cloud Computing", "Azure", "DevOps", "Clean Architecture",
-      "CQRS", "System Design",
-    ],
-  };
-
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="me" href={meta.socials.github} />
+        <link rel="me" href={meta.socials.linkedin} />
+        <link rel="me" href={meta.socials.x} />
+        {/*
+          A plain <script>, deliberately NOT next/script: next/script defers
+          JSON-LD into the RSC flight payload, where it never appears as a
+          parseable element in the served HTML — invisible to every crawler
+          that does not execute JavaScript.
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildGraph()) }}
+        />
+      </head>
+      <body className={dmSans.className}>
+        {children}
+        <Analytics />
         <Script id="clarity-script" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -118,15 +94,6 @@ export default function RootLayout({
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "s0v14qc0c0");`}
         </Script>
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className={dmSans.className}>
-        {children}
-        <Analytics />
       </body>
     </html>
   );
