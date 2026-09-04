@@ -57,7 +57,7 @@ ${meta.disambiguation}
 - Name: ${name}
 - Also known as: ${meta.alternateName}
 - Role: ${jobTitle}
-- Country: Georgia (GE)
+- Location: ${meta.addressLocality}, Georgia (GE)
 - Website: ${siteUrl}
 - Email: ${meta.email}
 - GitHub: ${meta.socials.github}

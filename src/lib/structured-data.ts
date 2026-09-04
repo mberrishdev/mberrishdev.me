@@ -134,7 +134,12 @@ export function buildGraph() {
         },
         address: {
           "@type": "PostalAddress",
+          addressLocality: meta.addressLocality,
           addressCountry: meta.addressCountry,
+        },
+        homeLocation: {
+          "@type": "Place",
+          name: `${meta.addressLocality}, Georgia`,
         },
         email: `mailto:${meta.email}`,
         telephone: meta.telephone,
