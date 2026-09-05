@@ -57,7 +57,7 @@ export default function ProjectsIndex() {
           <div className="glass-pill">
             <Link href="/">Home</Link>
             <Link href="/projects" className="active">Projects</Link>
-            <Link href="/#experience">Experience</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/#contact">Contact</Link>
           </div>
         </nav>

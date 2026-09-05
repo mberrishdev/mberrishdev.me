@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: Params) {
           <div className="glass-pill">
             <Link href="/">Home</Link>
             <Link href="/projects">Projects</Link>
-            <Link href="/#experience">Experience</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/#contact">Contact</Link>
           </div>
         </nav>

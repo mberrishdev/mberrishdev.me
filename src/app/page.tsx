@@ -19,6 +19,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <Link href="/blog">Blog</Link>
             <a href="#contact">Contact</a>
           </div>
         </nav>
