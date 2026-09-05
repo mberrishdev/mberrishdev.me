@@ -12,6 +12,7 @@ import {
   type Project,
 } from "@/lib/projects";
 import { ID } from "@/lib/structured-data";
+import { rssAlternate } from "@/lib/seo";
 
 export function generateStaticParams() {
   return pagedProjects.map((p) => ({ slug: p.slug }));
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: project.title,
     description,
-    alternates: { canonical: `/projects/${project.slug}` },
+    alternates: { canonical: `/projects/${project.slug}`, types: rssAlternate },
     openGraph: {
       title: `${project.title} — ${meta.name}`,
       description,

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import meta from "@/data/meta.json";
 import { getPosts, formatDate } from "@/lib/blog";
 import { ID } from "@/lib/structured-data";
+import { rssAlternate } from "@/lib/seo";
 
 const description =
   "Notes on SignalR, .NET and building real-time systems — by Mikheil Berishvili.";
@@ -11,7 +12,7 @@ const description =
 export const metadata: Metadata = {
   title: "Blog",
   description,
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/blog", types: rssAlternate },
   openGraph: { title: `Blog — ${meta.name}`, description, url: "/blog", type: "website" },
 };
 
@@ -73,6 +74,11 @@ export default async function BlogIndex() {
                 Mostly SignalR and .NET — the problems I hit at work and in the tools I
                 build, written down while they are still fresh.
               </p>
+              <div className="hero-links" style={{ marginTop: "20px" }}>
+                <a href="/blog/rss.xml" className="gbtn">
+                  Subscribe via RSS <span className="arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
             </header>
 
             <section aria-labelledby="posts-heading">
@@ -99,8 +105,6 @@ export default async function BlogIndex() {
 
             <p className="detail-back">
               <Link href="/">← Back home</Link>
-              <span aria-hidden="true"> · </span>
-              <a href="/blog/rss.xml">RSS</a>
             </p>
           </div>
         </main>

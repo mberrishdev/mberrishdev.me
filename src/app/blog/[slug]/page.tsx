@@ -4,6 +4,7 @@ import Link from "next/link";
 import meta from "@/data/meta.json";
 import { getPosts, getPost, formatDate } from "@/lib/blog";
 import { ID } from "@/lib/structured-data";
+import { rssAlternate } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return (await getPosts()).map((p) => ({ slug: p.slug }));
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     title: post.title,
     description: post.description,
     keywords: post.tags,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `/blog/${post.slug}`, types: rssAlternate },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -122,6 +123,8 @@ export default async function BlogPost({ params }: Params) {
 
             <p className="detail-back">
               <Link href="/blog">← All posts</Link>
+              <span aria-hidden="true"> · </span>
+              <a href="/blog/rss.xml">Subscribe via RSS</a>
             </p>
           </article>
         </main>

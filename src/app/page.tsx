@@ -57,6 +57,9 @@ export default function Home() {
                 <a href={meta.socials.linkedin} target="_blank" rel="me noopener noreferrer" className="gbtn">
                   LinkedIn <span className="arrow" aria-hidden="true">↗</span>
                 </a>
+                <a href={meta.socials.x} target="_blank" rel="me noopener noreferrer" className="gbtn">
+                  X <span className="arrow" aria-hidden="true">↗</span>
+                </a>
               </div>
             </div>
           </section>
@@ -191,6 +194,9 @@ export default function Home() {
                 </a>
                 <a href={meta.socials.linkedin} target="_blank" rel="me noopener noreferrer" className="gbtn">
                   LinkedIn <span className="arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href={meta.socials.x} target="_blank" rel="me noopener noreferrer" className="gbtn">
+                  X <span className="arrow" aria-hidden="true">↗</span>
                 </a>
               </address>
             </div>

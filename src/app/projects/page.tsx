@@ -3,6 +3,7 @@ import Link from "next/link";
 import meta from "@/data/meta.json";
 import ProjectIcon from "@/components/ProjectIcon";
 import { allProjects, projectPath, hasLive, hasSource } from "@/lib/projects";
+import { rssAlternate } from "@/lib/seo";
 
 const description =
   "Open-source tools, macOS apps and .NET libraries built by Mikheil Berishvili — including Notchly, Patchly, Readly, Camus, Versume, HubDocs and dct.";
@@ -10,7 +11,7 @@ const description =
 export const metadata: Metadata = {
   title: "Projects",
   description,
-  alternates: { canonical: "/projects" },
+  alternates: { canonical: "/projects", types: rssAlternate },
   openGraph: {
     title: `Projects — ${meta.name}`,
     description,

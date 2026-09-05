@@ -26,7 +26,16 @@ export const metadata: Metadata = {
   publisher: meta.name,
   formatDetection: { email: true, address: false, telephone: true },
   category: "technology",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    // Feed autodiscovery: this is how RSS readers and browser extensions find
+    // the feed. Without it, a feed only exists for people who guess the URL.
+    types: {
+      "application/rss+xml": [
+        { url: "/blog/rss.xml", title: `${meta.name} — Blog` },
+      ],
+    },
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
