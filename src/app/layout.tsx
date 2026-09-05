@@ -4,7 +4,18 @@ import "./globals.css";
 import meta from "@/data/meta.json";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { VemetricScript } from "@vemetric/react";
 import { buildGraph } from "@/lib/structured-data";
+
+/**
+ * Vemetric's token is a public, client-side identifier — it ships in the
+ * browser bundle for every visitor, exactly like a GA measurement ID, so
+ * there is nothing to keep secret. It is inlined rather than left env-only
+ * because `.env*` is gitignored: an unset var in the Vercel build would mean
+ * analytics silently never firing in production. The env var still overrides.
+ */
+const VEMETRIC_TOKEN =
+  process.env.NEXT_PUBLIC_VEMETRIC_TOKEN ?? "rzvI2eTBb9XIJSzK";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -96,6 +107,7 @@ export default function RootLayout({
       <body className={dmSans.className}>
         {children}
         <Analytics />
+        <VemetricScript token={VEMETRIC_TOKEN} />
         <Script id="clarity-script" strategy="afterInteractive">
           {`(function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
